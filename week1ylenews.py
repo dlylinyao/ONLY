@@ -31,7 +31,7 @@ for title in news_titles:
     if category_tag:
         category_text = category_tag.get_text().strip()
     else:
-        category_text = "General"
+        category_text = "N/A"
 
     headline_text = title.get_text().strip()
 
