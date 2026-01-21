@@ -37,8 +37,11 @@ for title in news_titles:
         category_text = category_tag.get_text().strip()
     else:
         category_text = "N/A"
-
-    
+    url_tag = title.find('a', href=True)
+    if url_tag:
+        url_text = url_tag['href']
+    else:
+        url_text = "N/A"    
 
     #print(f"{category_text:<20} | {headline_text}")
 
@@ -56,7 +59,8 @@ for title in news_titles:
     all_news_data.append({
         'Time': timestamp_text,
         'Category': category_text,
-        'Headline': headline_text
+        'Headline': headline_text, 
+        'url': url_text
     })
 
 # Create DataFrame
