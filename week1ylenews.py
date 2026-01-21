@@ -40,6 +40,17 @@ for title in news_titles:
     url_tag = title.find('a', href=True)
     if url_tag:
         url_text = url_tag['href']
+        if url_text:
+            new_response = requests.get(url_text)
+            new_soup = BeautifulSoup(new_response.content, 'html.parser')
+            new_soup = new_soup.find('section').find_parent()
+            all_news_text = new_soup.find_all('p')
+            news_text_parts = []
+            for new in all_news_text:
+                text = new.get_text().strip()
+                if text:
+                    news_text_parts.append(text)
+            news_text = " ".join(news_text_parts)
     else:
         url_text = "N/A"    
 
@@ -60,7 +71,8 @@ for title in news_titles:
         'Time': timestamp_text,
         'Category': category_text,
         'Headline': headline_text, 
-        'url': url_text
+        'url': url_text,
+        'text': news_text
     })
 
 # Create DataFrame
@@ -79,3 +91,8 @@ filename = f"week1ylenews_{current_date}.csv"
 df.to_csv(filename, index=False, encoding='utf-8-sig')
 
 print(f"Done! Saved to {filename}")
+
+
+
+
+   
