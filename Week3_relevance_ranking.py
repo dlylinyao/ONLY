@@ -5,6 +5,16 @@ import numpy as np
 import re
 import os
 import glob
+from nltk.stem import SnowballStemmer
+
+stemmer = SnowballStemmer("english")
+
+def stemmed_tokenizer(text):
+    
+    tokens = re.findall(r"(?u)\b\w+\b", text.lower())
+    
+    stemmed = [stemmer.stem(t) for t in tokens]
+    return stemmed
 
 # Data Loading
 
@@ -65,7 +75,8 @@ d = {"and": "&", "AND": "&", "or": "|", "OR": "|", "not": "1 -", "NOT": "1 -", "
 
 def rewrite_token(t):
     if t in d: return d[t]
-    term = t.lower()
+    term = stemmer.stem(t.lower())
+    #term = t.lower()
     if term not in t2i: return f'np.zeros((1, {len(documents)}), dtype=int)'
     return f'sparse_td_matrix[t2i["{term}"]].todense()'
 
@@ -106,16 +117,27 @@ if __name__ == "__main__":
         print(f"\n[Init] Loaded {len(documents)} documents.")
         
         # Boolean Index
-        print("Building Boolean Index...", end=" ")
-        cv = CountVectorizer(lowercase=True, binary=True, token_pattern=r"(?u)\b\w+\b")
+        #print("Building Boolean Index...", end=" ")
+        print("Building Boolean Index (with Stemming)...", end=" ")
+        #cv = CountVectorizer(lowercase=True, binary=True, token_pattern=r"(?u)\b\w+\b")
+        cv = CountVectorizer(lowercase=True, binary=True, tokenizer=stemmed_tokenizer)
         sparse_matrix = cv.fit_transform(documents)
         t2i = cv.vocabulary_
         sparse_td_matrix = sparse_matrix.T.tocsr()
         print("Done.")
 
         # TF-IDF Index
-        print("Building TF-IDF Index...", end=" ")
-        tfidf_vectorizer = TfidfVectorizer(lowercase=True, sublinear_tf=True, use_idf=True, norm="l2")
+        #print("Building TF-IDF Index...", end=" ")
+        print("Building TF-IDF Index (Stemming + 1-2 ngrams)...", end=" ")
+        #tfidf_vectorizer = TfidfVectorizer(lowercase=True, sublinear_tf=True, use_idf=True, norm="l2")
+        tfidf_vectorizer = TfidfVectorizer(
+            lowercase=True, 
+            sublinear_tf=True, 
+            use_idf=True, 
+            norm="l2",
+            tokenizer=stemmed_tokenizer, # Stemming
+            ngram_range=(1, 2)           # Phrases (Unigrams + Bigrams)
+        )
         tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
         print("Done.")
 
@@ -126,9 +148,13 @@ if __name__ == "__main__":
         print("Done.")
 
         print("\n" + "="*50)
-        print("SEARCH ENGINE READY")
+        #print("SEARCH ENGINE READY")
+        print("SEARCH ENGINE READY (Enhanced)")
+        print("Features added: Stemming (e.g., query 'houses' matches 'house')")
+        print("Features added: Phrases (e.g., query 'artificial intelligence' is treated as a unit)")
         print("Modes: [1] Boolean  [2] TF-IDF  [3] Semantic AI")
         print("Type '#1', '#2', or '#3' to switch modes. Default is TF-IDF.")
+        print("Type '#' to quit.")
         print("="*50)
 
         current_mode = "2"
