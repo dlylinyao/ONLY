@@ -73,10 +73,23 @@ bert_embeddings = None
 
 d = {"and": "&", "AND": "&", "or": "|", "OR": "|", "not": "1 -", "NOT": "1 -", "(": "(", ")": ")"}
 
+#wildcards regex function (works quite nice with *ord and wor* but badly with w*d)
+
+def enable_wildcards(term, vocabulary):
+    pattern = re.escape(term)
+    pattern = pattern.replace('\*', '\w+')
+    matches = [v for v in vocabulary if re.fullmatch(pattern, v)]
+    return matches
+
 def rewrite_token(t):
     if t in d: return d[t]
     term = stemmer.stem(t.lower())
-    #term = t.lower()
+    if "*" in term: #handle wildcard cases
+        matches = enable_wildcards(term, t2i.keys())
+        if not matches: 
+           return f'np.zeros((1, {len(documents)}), dtype=int)'
+        parts = [f'sparse_td_matrix[t2i["{m}"]].todense()' for m in matches]
+        return " | ".join(parts)
     if term not in t2i: return f'np.zeros((1, {len(documents)}), dtype=int)'
     return f'sparse_td_matrix[t2i["{term}"]].todense()'
 
@@ -118,7 +131,7 @@ if __name__ == "__main__":
         
         # Boolean Index
         #print("Building Boolean Index...", end=" ")
-        print("Building Boolean Index (with Stemming)...", end=" ")
+        print("Building Boolean Index (with Stemming and wildcards)...", end=" ")
         #cv = CountVectorizer(lowercase=True, binary=True, token_pattern=r"(?u)\b\w+\b")
         cv = CountVectorizer(lowercase=True, binary=True, tokenizer=stemmed_tokenizer)
         sparse_matrix = cv.fit_transform(documents)
@@ -152,6 +165,7 @@ if __name__ == "__main__":
         print("SEARCH ENGINE READY (Enhanced)")
         print("Features added: Stemming (e.g., query 'houses' matches 'house')")
         print("Features added: Phrases (e.g., query 'artificial intelligence' is treated as a unit)")
+        print("Boolean search supports wildcards of the form *card and wild*")
         print("Modes: [1] Boolean  [2] TF-IDF  [3] Semantic AI")
         print("Type '#1', '#2', or '#3' to switch modes. Default is TF-IDF.")
         print("Type '#' to quit.")
