@@ -1,0 +1,13 @@
+1. What is the main idea of your application?
+Our application is a satirical news search and transformation engine designed to act as a cognitive buffer between the user and the often-stressful nature of the global news cycle. By scraping full-text data from Yle News, the system utilizes sentiment analysis to categorize articles, specifically filtering out traumatic content such as war and tragedy while intentionally retaining “daily annoyances” like public transport delays, taxes, and political debates. These retained articles serve as the raw material for a LLM that generates a satirical, "redefined" dictionary for search terms. For example, if a user searches for "Taxation," the engine might display a funny definition based on a recent Yle article about Finnish tax returns, alongside the actual news.
+
+2. What problem does it solve?
+We are addressing three specific modern problems:
+- News Avoidance and Mental Health: Many people stop following the news because it is overwhelmingly negative. By creating a "Positive Only" space, we allow people to stay connected to Finnish society without the psychological toll of "doomscrolling."
+- We solve the "Boredom Gap" by making serious news interesting. By transforming dry reporting into satirical definitions and witty summaries, we turn the act of staying informed into a form of entertainment—essentially gamifying the consumption of daily news.
+- Engagement and Information Fatigue: Traditional news can be dry and repetitive. By adding a satirical dictionary component (the LLM definitions), we make the news more engaging and shareable, helping younger or more casual readers stay informed through humor.
+
+3. What data would you like to index?
+Our dataset will be built using a custom web scraper targeting Yle News.
+Primary Data: We will index the Full Text of articles. 
+Each article will be indexed with tags such as Category (culture, business, etc.), date, and a calculated Sentiment Score (0.0 to 1.0).

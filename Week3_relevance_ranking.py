@@ -9,15 +9,23 @@ from nltk.stem import SnowballStemmer
 
 stemmer = SnowballStemmer("english")
 
+# Global variable: Store original vocabulary (for wildcard expansion)
+original_vocabulary = set()
+
 def stemmed_tokenizer(text):
-    
+    # Extract original words
     tokens = re.findall(r"(?u)\b\w+\b", text.lower())
     
+    # Update global original vocabulary
+    # We save these before stemming to enable wildcard matching later (e.g., *ing -> running)
+    if tokens:
+        original_vocabulary.update(tokens)
+    
+    # Return stems
     stemmed = [stemmer.stem(t) for t in tokens]
     return stemmed
 
 # Data Loading
-
 def get_week1_documents():
     folder_path = "data"
     file_pattern = "yle_business_culture_*.csv"
@@ -39,29 +47,86 @@ def get_week1_documents():
         print(f"An unexpected error occurred: {e}")
         return []
 
+# --- Core Helper Functions ---
+
+def enable_wildcards(term, vocabulary):
+    """
+    Input: "hous*", vocabulary
+    Output: ["house", "housing", "household"]
+    """
+    pattern = re.escape(term)
+    pattern = pattern.replace(r'\*', r'\w*') # Convert * to regex \w* (0 or more characters)
+    matches = [v for v in vocabulary if re.fullmatch(pattern, v)]
+    return matches
 
 def get_smart_snippet(text, query, window=100):
-    # Remove Boolean operators to find keywords for the snippet
+    # Simple cleanup, remove Boolean operators
     clean_query = re.sub(r'\b(AND|OR|NOT)\b', '', query, flags=re.IGNORECASE)
-    words = re.findall(r'\w+', clean_query)
+    words = re.findall(r'[\w\*]+', clean_query) # Allow words with *
+    
     if not words: return text[:200] + "..."
     
-    match = re.search(re.escape(words[0]), text, re.IGNORECASE)
-    if not match: return text[:200] + "..."
+    # Find the first position in text that matches the query
+    first_match_index = -1
     
-    start = max(0, match.start() - window)
-    end = min(len(text), match.start() + window)
+    # Iterate through query words to find the first match
+    for word in words:
+        if "*" in word:
+            # If wildcard, build regex to search
+            pattern_str = re.escape(word).replace(r'\*', r'\w*')
+            match = re.search(pattern_str, text, re.IGNORECASE)
+        else:
+            # If normal word, search directly
+            match = re.search(re.escape(word), text, re.IGNORECASE)
+            
+        if match:
+            first_match_index = match.start()
+            break
+    
+    if first_match_index == -1: return text[:200] + "..."
+    
+    start = max(0, first_match_index - window)
+    end = min(len(text), first_match_index + window)
     return "..." + text[start:end] + "..."
 
 def highlight_text(text, query):
+    """
+    Fixed highlighting function: Supports wildcard highlighting
+    """
     clean_query = re.sub(r'\b(AND|OR|NOT)\b', '', query, flags=re.IGNORECASE)
-    keywords = [w for w in re.findall(r'\w+', clean_query)]
-    for word in keywords:
-        pattern = re.compile(re.escape(word), re.IGNORECASE)
+    query_words = re.findall(r'[\w\*]+', clean_query)
+    
+    text_words = set(re.findall(r'\w+', text.lower()))
+    words_to_highlight = set()
+
+    for q_word in query_words:
+        q_word_lower = q_word.lower()
+        
+        # Case A: Contains wildcard (e.g., fin*)
+        if "*" in q_word_lower:
+            # Match regex directly against words in the current document
+            matches = enable_wildcards(q_word_lower, text_words)
+            words_to_highlight.update(matches)
+            
+        # Case B: Normal word (e.g., market)
+        else:
+            # Use stem matching (market matches marketing)
+            q_stem = stemmer.stem(q_word_lower)
+            for t_word in text_words:
+                if stemmer.stem(t_word) == q_stem:
+                    words_to_highlight.add(t_word)
+
+    # Sort: Replace longer words first to prevent partial replacement issues 
+    sorted_words = sorted(list(words_to_highlight), key=len, reverse=True)
+    
+    for word in sorted_words:
+        # Use \b to match whole word boundaries
+        pattern = re.compile(r'\b' + re.escape(word) + r'\b', re.IGNORECASE)
         text = pattern.sub(f"\033[1;36m\\g<0>\033[0m", text)
+        
     return text
 
-# Search Logic
+# --- Search Logic ---
 
 documents = []
 t2i = {}
@@ -73,23 +138,22 @@ bert_embeddings = None
 
 d = {"and": "&", "AND": "&", "or": "|", "OR": "|", "not": "1 -", "NOT": "1 -", "(": "(", ")": ")"}
 
-#wildcards regex function (works quite nice with *ord and wor* but badly with w*d)
-
-def enable_wildcards(term, vocabulary):
-    pattern = re.escape(term)
-    pattern = pattern.replace('\*', '\w+')
-    matches = [v for v in vocabulary if re.fullmatch(pattern, v)]
-    return matches
-
 def rewrite_token(t):
     if t in d: return d[t]
-    term = stemmer.stem(t.lower())
-    if "*" in term: #handle wildcard cases
-        matches = enable_wildcards(term, t2i.keys())
-        if not matches: 
+    
+    if "*" in t: 
+        # Wildcard logic: Find original words -> Convert to stems -> Check index
+        raw_matches = enable_wildcards(t.lower(), original_vocabulary)
+        stemmed_matches = {stemmer.stem(m) for m in raw_matches}
+        valid_stems = [s for s in stemmed_matches if s in t2i]
+        
+        if not valid_stems: 
            return f'np.zeros((1, {len(documents)}), dtype=int)'
-        parts = [f'sparse_td_matrix[t2i["{m}"]].todense()' for m in matches]
+        
+        parts = [f'sparse_td_matrix[t2i["{s}"]].todense()' for s in valid_stems]
         return " | ".join(parts)
+    
+    term = stemmer.stem(t.lower())
     if term not in t2i: return f'np.zeros((1, {len(documents)}), dtype=int)'
     return f'sparse_td_matrix[t2i["{term}"]].todense()'
 
@@ -106,7 +170,26 @@ def search_boolean(query):
         return [], None
 
 def search_tfidf(query):
-    query_vec = tfidf_vectorizer.transform([query])
+    # Expand query for wildcards
+    expanded_query_terms = []
+    
+    for word in query.split():
+        if "*" in word:
+            # Find all matching original words
+            matches = enable_wildcards(word.lower(), original_vocabulary)
+            if matches:
+                expanded_query_terms.extend(matches)
+        else:
+            expanded_query_terms.append(word)
+    
+    # If empty after expansion (no match found), use original term (prevents errors, though result might be 0)
+    if not expanded_query_terms:
+        expanded_query_str = query
+    else:
+        expanded_query_str = " ".join(expanded_query_terms)
+
+    # Perform TF-IDF calculation using the expanded query string
+    query_vec = tfidf_vectorizer.transform([expanded_query_str])
     cosine_similarities = np.dot(query_vec, tfidf_matrix.T).toarray()[0]
     ranked_indices = np.argsort(cosine_similarities)[::-1]
     matches = [(idx, cosine_similarities[idx]) for idx in ranked_indices if cosine_similarities[idx] > 0]
@@ -116,8 +199,6 @@ def search_semantic(query):
     query_embedding = bert_model.encode([query])
     cosine_similarities = np.dot(query_embedding, bert_embeddings.T)[0]
     ranked_indices = np.argsort(cosine_similarities)[::-1]
-    
-    # Threshold to filter out low-relevance results
     threshold = 0.1
     matches = [(idx, cosine_similarities[idx]) for idx in ranked_indices if cosine_similarities[idx] > threshold]
     return matches
@@ -129,43 +210,32 @@ if __name__ == "__main__":
     if documents:
         print(f"\n[Init] Loaded {len(documents)} documents.")
         
-        # Boolean Index
-        #print("Building Boolean Index...", end=" ")
-        print("Building Boolean Index (with Stemming and wildcards)...", end=" ")
-        #cv = CountVectorizer(lowercase=True, binary=True, token_pattern=r"(?u)\b\w+\b")
+        print("Building Boolean Index...", end=" ")
         cv = CountVectorizer(lowercase=True, binary=True, tokenizer=stemmed_tokenizer)
         sparse_matrix = cv.fit_transform(documents)
         t2i = cv.vocabulary_
         sparse_td_matrix = sparse_matrix.T.tocsr()
-        print("Done.")
+        print(f"Done. (Original Vocab: {len(original_vocabulary)})")
 
-        # TF-IDF Index
-        #print("Building TF-IDF Index...", end=" ")
-        print("Building TF-IDF Index (Stemming + 1-2 ngrams)...", end=" ")
-        #tfidf_vectorizer = TfidfVectorizer(lowercase=True, sublinear_tf=True, use_idf=True, norm="l2")
+        print("Building TF-IDF Index...", end=" ")
         tfidf_vectorizer = TfidfVectorizer(
             lowercase=True, 
             sublinear_tf=True, 
             use_idf=True, 
             norm="l2",
-            tokenizer=stemmed_tokenizer, # Stemming
-            ngram_range=(1, 2)           # Phrases (Unigrams + Bigrams)
+            tokenizer=stemmed_tokenizer, 
+            ngram_range=(1, 2)
         )
         tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
         print("Done.")
 
-        # Semantic Model
-        print("Loading AI Model (Semantic)...", end=" ")
+        print("Loading AI Model...", end=" ")
         bert_model = SentenceTransformer('all-MiniLM-L6-v2')
         bert_embeddings = bert_model.encode(documents)
         print("Done.")
 
         print("\n" + "="*50)
-        #print("SEARCH ENGINE READY")
-        print("SEARCH ENGINE READY (Enhanced)")
-        print("Features added: Stemming (e.g., query 'houses' matches 'house')")
-        print("Features added: Phrases (e.g., query 'artificial intelligence' is treated as a unit)")
-        print("Boolean search supports wildcards of the form *card and wild*")
+        print("SEARCH ENGINE READY")
         print("Modes: [1] Boolean  [2] TF-IDF  [3] Semantic AI")
         print("Type '#1', '#2', or '#3' to switch modes. Default is TF-IDF.")
         print("Type '#' to quit.")
@@ -180,12 +250,10 @@ if __name__ == "__main__":
 
             if user_input == "#": break
             
-            # Switch mode logic
             if user_input in ["#1", "#2", "#3"]:
                 new_mode = user_input[1]
                 current_mode = new_mode
-                new_name = mode_map.get(current_mode)
-                print(f"Switched to {new_name} mode.")
+                print(f"Switched to {mode_map.get(current_mode)} mode.")
                 continue
             
             if user_input == "": continue
@@ -204,10 +272,11 @@ if __name__ == "__main__":
 
             for idx, score in results[:5]:
                 doc_content = documents[idx]
+                # Pass text and user_input to get the correct snippet
                 snippet = get_smart_snippet(doc_content, user_input)
+                # Highlight snippet
                 highlighted = highlight_text(snippet, user_input)
                 
-                # Show score only for non-Boolean modes
                 score_str = f"(Score: {score:.4f})" if current_mode != "1" else ""
                 print(f"[-] {score_str} {highlighted}")
 
