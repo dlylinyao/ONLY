@@ -205,7 +205,7 @@ if __name__ == "__main__":
             use_idf=True, 
             norm="l2",
             tokenizer=stemmed_tokenizer, # Stemming
-            ngram_range=(1, 2)           # Phrases (Unigrams + Bigrams)
+            ngram_range=(1, 3)           # 3 Phrases 
         )
         tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
         print("Done.")
