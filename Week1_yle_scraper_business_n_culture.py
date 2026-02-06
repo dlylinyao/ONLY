@@ -3,12 +3,19 @@
 # extracts headlines, categories, timestamps, and full article text.
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup 
 import pandas as pd
 import time
 import sys
 import os
 from datetime import datetime
+import torch
+from transformers import pipeline
+#sentiment analysis pipeline
+sentiment_analysis = pipeline(task="sentiment-analysis",
+                              model="distilbert-base-uncased-finetuned-sst-2-english")
+
+
 
 def print_progress_bar(iteration, total, prefix='', suffix='', length=30, fill='█'):
     percent = ("{0:.1f}").format(100 * (iteration / float(total)))
@@ -103,22 +110,28 @@ def scrape_yle_news():
                                 if main:
                                     paras = main.find_all('p')
                                     full_text = " ".join([p.text.strip() for p in paras if p.text.strip()])
-                                
-                    
+                                    #implement sentiment analysis
+                                    sentiment = sentiment_analyse(full_text)
+                                    passes_treshold = None #if the sentiment is too negative, it will get a 0 and won't pass
+                                    if sentiment[0]['label'] == 'NEGATIVE' and sentiment[0]['score'] >= 0.99:
+                                        passes_treshold = 0
+                                    else:
+                                        passes_treshold = 1
                                 if timestamp == "N/A":
                                     d_time = article_soup.find('time')
                                     if d_time: timestamp = d_time.text.strip()
                             time.sleep(1)
                         except:
                             pass
-
-                    all_news_data.append({
-                        'Time': timestamp,
-                        'Category': category,
-                        'Headline': headline,
-                        'Full_Text': full_text,
-                        'URL': article_url
-                    })
+                        all_news_data.append({
+                            'Time': timestamp,
+                            'Category': category,
+                            'Headline': headline,
+                            'Full_Text': full_text,
+                            'URL': article_url,
+                            'Sentiment_analysis': sentiment,
+                            'Passes_treshold': passes_treshold
+                        })
                     
                     print_progress_bar(i + 1, total_articles, prefix='Progress:', suffix='Complete', length=40)
 
@@ -140,7 +153,22 @@ def scrape_yle_news():
         full_path = os.path.join(output_folder, filename)
        
         df.to_csv(full_path, index=False, encoding='utf-8-sig')
+
+        #filter news based on passing the threshold
+        filtered_news_data = [article for article in all_news_data if article['Passes_treshold'] == 1]
+
+        df_filtered = pd.DataFrame(filtered_news_data).drop_duplicates(subset=['URL'])
         
+        output_folder = "data"
+        
+        os.makedirs(output_folder, exist_ok=True)
+        
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        filename = f"filtered_yle_business_culture_{current_date}.csv"
+        full_path = os.path.join(output_folder, filename)
+       
+        df_filtered.to_csv(full_path, index=False, encoding='utf-8-sig')
+
         print(f"\n--- MISSION ACCOMPLISHED ---")
         print(f"Total Unique Articles: {len(df)}")
         print(f"File saved to: {full_path}")  
@@ -150,6 +178,11 @@ def scrape_yle_news():
         print(df[['Category', 'Headline']].head(5))
     else:
         print("\nNo data found.")
+
+def sentiment_analyse(article):
+    return sentiment_analysis(article)
+
+
 
 if __name__ == "__main__":
     scrape_yle_news()
