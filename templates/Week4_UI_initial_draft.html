@@ -141,7 +141,8 @@
             document.getElementById('news-loading').classList.remove('hidden');
             document.getElementById('news-sources').classList.add('hidden');
             
-            fetchNewsAndDef(input);
+            // fetchNewsAndDef(input);
+            fetchTfidfResults(input);
         }
 
         function goBack() {
@@ -239,6 +240,62 @@
                 `;
             }
         }
+        async function fetchTfidfResults(keyword) {
+    try {
+        const response = await fetch("/search", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                query: keyword
+            })
+        });
+
+        const results = await response.json();
+        renderResults(results);
+
+    } catch (err) {
+        console.error(err);
+        document.getElementById("news-sources").innerHTML =
+            "<p class='text-red-500'>Search failed.</p>";
+    }
+}
+function renderResults(results) {
+    const container = document.getElementById("news-sources");
+    const loading = document.getElementById("news-loading");
+    loading.classList.add("hidden");
+    container.classList.remove("hidden");
+    
+    container.innerHTML = "";
+
+    if (results.length === 0) {
+        container.innerHTML = `
+            <div class="p-8 bg-yellow-100 rounded-2xl text-center font-bold">
+                No relevant documents found.
+            </div>
+        `;
+        return;
+    }
+
+    results.forEach(item => {
+        const card = document.createElement("div");
+        card.className =
+            "p-6 bg-white rounded-[2rem] border-2 border-pink-100 shadow-md hover:shadow-xl transition-all";
+
+        card.innerHTML = `
+            <div class="text-sm font-black text-purple-500 mb-2">
+                TF-IDF Score: ${item.score.toFixed(4)}
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed">
+                ${item.content.substring(0, 300)}...
+            </p>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
     </script>
 </body>
 </html>
