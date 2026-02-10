@@ -13,7 +13,7 @@ import torch
 from transformers import pipeline
 #sentiment analysis pipeline
 sentiment_analysis = pipeline(task="sentiment-analysis",
-                              model="distilbert-base-uncased-finetuned-sst-2-english")
+                              model="nlptown/bert-base-multilingual-uncased-sentiment")
 
 
 
@@ -113,7 +113,7 @@ def scrape_yle_news():
                                     #implement sentiment analysis
                                     sentiment = sentiment_analyse(full_text)
                                     passes_treshold = None #if the sentiment is too negative, it will get a 0 and won't pass
-                                    if sentiment[0]['label'] == 'NEGATIVE' and sentiment[0]['score'] >= 0.99:
+                                    if sentiment[0]['label'] == '1 star' and sentiment[0]['score'] >= 0.50:
                                         passes_treshold = 0
                                     else:
                                         passes_treshold = 1
@@ -168,6 +168,20 @@ def scrape_yle_news():
         full_path = os.path.join(output_folder, filename)
        
         df_filtered.to_csv(full_path, index=False, encoding='utf-8-sig')
+
+        filtered_out_news_data = [article for article in all_news_data if article['Passes_treshold'] == 0]
+
+        df_filtered_out = pd.DataFrame(filtered_out_news_data).drop_duplicates(subset=['URL'])
+        
+        output_folder = "data"
+        
+        os.makedirs(output_folder, exist_ok=True)
+        
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        filename = f"filtered_out_yle_business_culture_{current_date}.csv"
+        full_path = os.path.join(output_folder, filename)
+       
+        df_filtered_out.to_csv(full_path, index=False, encoding='utf-8-sig')
 
         print(f"\n--- MISSION ACCOMPLISHED ---")
         print(f"Total Unique Articles: {len(df)}")
