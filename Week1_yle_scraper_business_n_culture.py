@@ -35,10 +35,10 @@ def scrape_yle_news():
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
     all_news_data = []
     
-    print("\n--- STARTING SCRAPER ---")
+    #print("\n--- STARTING SCRAPER ---")
 
     for section_name, link in sections:
-        print(f"\nAccessing Section: {section_name} ({link})")
+        #print(f"\nAccessing Section: {section_name} ({link})")
         
         try:
             res = requests.get(link, headers=headers)
@@ -50,8 +50,8 @@ def scrape_yle_news():
             titles = soup.find_all('h3')
             total_articles = len(titles)
             
-            print(f"Found {total_articles} articles. Extracting...")
-            print_progress_bar(0, total_articles, prefix='Progress:', suffix='Complete', length=40)
+            #print(f"Found {total_articles} articles. Extracting...")
+            #print_progress_bar(0, total_articles, prefix='Progress:', suffix='Complete', length=40)
 
             for i, t in enumerate(titles):
                 try:
@@ -133,7 +133,7 @@ def scrape_yle_news():
                             'Passes_treshold': passes_treshold
                         })
                     
-                    print_progress_bar(i + 1, total_articles, prefix='Progress:', suffix='Complete', length=40)
+                    #print_progress_bar(i + 1, total_articles, prefix='Progress:', suffix='Complete', length=40)
 
                 except Exception:
                     continue
@@ -183,13 +183,13 @@ def scrape_yle_news():
        
         df_filtered_out.to_csv(full_path, index=False, encoding='utf-8-sig')
 
-        print(f"\n--- MISSION ACCOMPLISHED ---")
-        print(f"Total Unique Articles: {len(df)}")
-        print(f"File saved to: {full_path}")  
+        #print(f"\n--- MISSION ACCOMPLISHED ---")
+        #print(f"Total Unique Articles: {len(df)}")
+        #print(f"File saved to: {full_path}")  
         
         
-        print("\nData Preview:")
-        print(df[['Category', 'Headline']].head(5))
+        #print("\nData Preview:")
+        #print(df[['Category', 'Headline']].head(5))
     else:
         print("\nNo data found.")
 

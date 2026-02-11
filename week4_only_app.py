@@ -1,7 +1,20 @@
 from flask import Flask, render_template, request, jsonify
 import search_engine_tfidf as se
+import Week1_yle_scraper_business_n_culture as scraper
+import os 
+import glob
+import time 
 
 app = Flask(__name__)
+
+
+folder_path = "data"
+file_pattern = "filtered_yle_business_culture_*.csv"
+search_path = os.path.join(folder_path, file_pattern)
+files = glob.glob(search_path)
+latest_file = max(files, key=os.path.getctime)
+if time.time() - os.path.getctime(latest_file) >= 24 * 60 * 60:
+    scraper.scrape_yle_news()
 
 se.init_tfidf_engine()
 

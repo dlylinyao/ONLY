@@ -27,7 +27,7 @@ def stemmed_tokenizer(text):
 
 def get_week1_documents():
     folder_path = "data"
-    file_pattern = "yle_business_culture_*.csv"
+    file_pattern = "filtered_yle_business_culture_*.csv"
     search_path = os.path.join(folder_path, file_pattern)
     files = glob.glob(search_path)
     if not files:
@@ -111,7 +111,7 @@ bert_embeddings = None
 
 d = {"and": "&", "AND": "&", "or": "|", "OR": "|", "not": "1 -", "NOT": "1 -", "(": "(", ")": ")"}
 
-# wildcards regex function (works quite nice with *ord and wor* but badly with w*d)
+# wildcards regex function 
 def enable_wildcards(term, vocabulary):
     pattern = re.escape(term)
     # [Logic Update] Actually fixed the w*d issue by changing \w+ to \w*
