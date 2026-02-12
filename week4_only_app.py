@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import search_engine_tfidf as se
-import Week1_yle_scraper_business_n_culture as scraper
+import scraper as scraper
 import os 
 import glob
 import time 
