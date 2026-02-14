@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The ONLY Humorous YLE News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        .emoji-bg {
+            position: fixed;
+            top: 100%;
+            font-size: 2rem;
+            user-select: none;
+            pointer-events: none;
+            z-index: -1;
+            animation: float 10s linear infinite;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .animate-pop { animation: fadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        .shimmer {
+            background: linear-gradient(90deg, #fce7f3 25%, #fae8ff 50%, #fce7f3 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.2s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #ec4899, #8b5cf6, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+     
+        .custom-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.2rem center;
+            background-repeat: no-repeat;
+            background-size: 1.25em 1.25em;
+            padding-right: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-100 via-purple-50 to-yellow-100 min-h-screen text-slate-800 font-sans overflow-x-hidden">
+
+    <div id="emoji-container"></div>
+
+    <div id="app" class="max-w-4xl mx-auto p-6 md:pt-16 relative z-10">
+        
+        <div id="search-page" class="text-center">
+            <div class="mb-10">
+                <div class="inline-block px-4 py-1 rounded-full bg-white/50 text-pink-600 font-bold text-sm mb-4 border border-pink-200 shadow-sm">
+                    ✨ Spark Joy with News ✨
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 gradient-text drop-shadow-sm">
+                    The 'ONLY' Humorous YLE News
+                </h1>
+                <p class="text-purple-600 text-xl font-bold bg-white/30 inline-block px-6 py-2 rounded-2xl">
+                    Discover humorous definitions and positive news! 🌈
+                </p>
+            </div>
+            
+            <div class="relative max-w-3xl mx-auto mb-16">
+                <div class="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-yellow-400 rounded-full blur opacity-30"></div>
+                
+                <div class="relative flex items-center">
+                    <input type="text" id="search-input" 
+                        placeholder="Type something happy... Nature? Coffee? 🌸" 
+                        class="w-full pl-8 pr-80 py-6 rounded-full border-none shadow-2xl focus:outline-none focus:ring-4 focus:ring-pink-300 text-xl transition-all bg-white truncate text-slate-600 font-medium placeholder-slate-400">
+                    
+                    <div class="absolute right-40 z-20 flex items-center h-full">
+                        <select id="mode-select" class="custom-select bg-gray-50 border border-pink-200 text-purple-700 py-2 pl-3 rounded-lg font-bold text-xs hover:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 transition-all cursor-pointer shadow-sm">
+                            <option value="tfidf" selected>TF-IDF</option>
+                            <option value="boolean">Boolean</option>
+                            <option value="semantic">Semantic</option>
+                        </select>
+                    </div>
+
+                    <button id="search-btn" onclick="handleSearch()" 
+                        class="absolute right-3 z-10 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-8 py-3 rounded-full hover:scale-105 active:scale-95 transition-all font-black shadow-xl uppercase tracking-tighter">
+                        HUNT! 🦄
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-page" class="hidden animate-pop">
+            <button onclick="goBack()" class="mb-6 bg-white px-6 py-2 rounded-full text-pink-600 font-black flex items-center gap-2 transition-all hover:bg-pink-500 hover:text-white shadow-md">
+                ← Back to Search 🎈
+            </button>
+
+            <div class="glass p-8 md:p-12 rounded-[3rem] shadow-2xl mb-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10 text-6xl">✨</div>
+                
+                <h2 id="result-keyword" class="text-4xl md:text-5xl font-black mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-purple-600 capitalize"></h2>
+                
+                <div id="def-section" class="mb-10">
+                    <div class="bg-gradient-to-r from-pink-50 to-purple-50 border-l-8 border-pink-500 p-8 rounded-3xl shadow-inner">
+                        <h3 class="text-sm font-black text-pink-400 uppercase tracking-widest mb-2">the ONLY definition 😋</h3>
+                        <p id="humorous-def" class="text-2xl font-bold text-slate-800 leading-tight italic">
+                            <span class="inline-block w-4/5 h-8 shimmer rounded-lg"></span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-black text-purple-700 flex items-center gap-3" id="results-title">
+                        News Related 🗞️
+                    </h3>
+                    <div id="news-loading" class="space-y-4">
+                        <div class="p-6 bg-white/50 rounded-3xl shimmer h-24"></div>
+                        <div class="p-6 bg-white/50 rounded-3xl shimmer h-24"></div>
+                    </div>
+                    <div id="news-sources" class="hidden space-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // 
+        // ============================================
+        const apiKey = ""; 
+
+        // Background Emoji Generator
+        const emojis = ['🌞', '🌸', '✨', '🌈', '🍦', '🦄', '🥳', '🐶', '🍭', '🍕', '🎉'];
+        function createEmojis() {
+            const container = document.getElementById('emoji-container');
+            const emoji = document.createElement('div');
+            emoji.className = 'emoji-bg';
+            emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            emoji.style.left = Math.random() * 100 + 'vw';
+            emoji.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            container.appendChild(emoji);
+            setTimeout(() => emoji.remove(), 10000);
+        }
+        setInterval(createEmojis, 500);
+
+       
+        function handleSearch() {
+            const input = document.getElementById('search-input').value.trim();
+            const modeSelect = document.getElementById('mode-select');
+            const selectedMode = modeSelect.value;
+            const selectedModeText = modeSelect.options[modeSelect.selectedIndex].text;
+
+            if (!input) return;
+
+            
+            document.getElementById('search-page').classList.add('hidden');
+            document.getElementById('result-page').classList.remove('hidden');
+            
+            
+            document.getElementById('result-keyword').innerText = input;
+            document.getElementById('results-title').innerText = `News Related (${selectedModeText}) 🗞️`;
+            
+            
+            document.getElementById('def-section').classList.remove('hidden');
+            document.getElementById('humorous-def').innerHTML = '<span class="inline-block w-full h-8 shimmer rounded-lg"></span>';
+
+           
+            document.getElementById('news-loading').classList.remove('hidden');
+            document.getElementById('news-sources').classList.add('hidden');
+            
+           
+            fetchSearchResults(input, selectedMode);
+
+            
+            fetchHumorousDefinition(input);
+        }
+
+        function goBack() {
+            document.getElementById('search-page').classList.remove('hidden');
+            document.getElementById('result-page').classList.add('hidden');
+            document.getElementById('search-input').value = '';
+        }
+
+        
+        async function fetchSearchResults(keyword, mode) {
+            try {
+                const response = await fetch("/search", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query: keyword, mode: mode })
+                });
+
+                const results = await response.json();
+                renderResults(results, mode);
+
+            } catch (err) {
+                console.error(err);
+                renderError("Search failed. Please try again later.");
+            }
+        }
+
+        
+        async function fetchAI(payload) {
+            if (!apiKey) {
+                console.warn("No API Key provided for Gemini.");
+                return null;
+            }
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            return await response.json();
+        }
+
+        async function fetchHumorousDefinition(keyword) {
+            // if no API
+            if (!apiKey) {
+                setTimeout(() => {
+                    document.getElementById('humorous-def').innerText = `${keyword} is awesome, but I need an API Key to tell you why! 😜`;
+                }, 1000);
+                return;
+            }
+
+            const defPrompt = `Define "${keyword}" in exactly TWO short, humorous sentences. 
+            Your definition MUST be directly related to the keyword "${keyword}". 
+            Maximum 20 words total. Be witty, fun, and use an emoji.`;
+
+            try {
+                const defResult = await fetchAI({
+                    contents: [{ role: "user", parts: [{ text: defPrompt }] }]
+                });
+
+                const aiText = defResult.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (aiText) {
+                    document.getElementById('humorous-def').innerText = aiText.trim();
+                } else {
+                    document.getElementById('humorous-def').innerText = `${keyword} is a mystery wrapped in an enigma. 🦄`;
+                }
+            } catch (e) {
+                console.error("AI Generation failed", e);
+                document.getElementById('humorous-def').innerText = `${keyword} is just too cool to define right now.`;
+            }
+        }
+
+        function renderError(message) {
+            const container = document.getElementById("news-sources");
+            const loading = document.getElementById("news-loading");
+            loading.classList.add("hidden");
+            container.classList.remove("hidden");
+            container.innerHTML = `<div class="p-8 bg-red-100 rounded-2xl text-center font-bold text-red-600">${message}</div>`;
+        }
+
+        function renderResults(results, mode) {
+            const container = document.getElementById("news-sources");
+            const loading = document.getElementById("news-loading");
+            loading.classList.add("hidden");
+            container.classList.remove("hidden");
+            
+            container.innerHTML = "";
+
+            if (!results || results.length === 0) {
+                container.innerHTML = `
+                    <div class="p-8 bg-yellow-100 rounded-2xl text-center font-bold text-yellow-700">
+                        No relevant documents found. Try a different query!
+                    </div>
+                `;
+                return;
+            }
+
+            results.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "p-6 bg-white rounded-[2rem] border-2 border-pink-100 shadow-md hover:shadow-xl transition-all mb-4";
+
+                // let scoreLabel = "Score";
+                // if (mode === 'tfidf') scoreLabel = "TF-IDF Score";
+                // else if (mode === 'semantic') scoreLabel = "Similarity Score";
+                // else if (mode === 'boolean') scoreLabel = "Match Status";
+
+                // const scoreDisplay = mode === 'boolean' ? "Matched" : item.score.toFixed(4);
+
+                card.innerHTML = `
+                    <p class="text-slate-700 text-sm leading-relaxed">
+                        ${item.content.substring(0, 300)}...
+                    </p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Add Enter to search
+        document.getElementById("search-input").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                handleSearch();
+            }
+        });
+    </script>
+</body>
+</html>
