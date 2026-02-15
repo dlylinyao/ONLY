@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plotting_Sky</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        /* =========================================
+           1. Global Layout (Infinite Scroll & Sky Blue Background)
+           ========================================= */
+        body, html {
+            margin: 0; padding: 0; 
+            width: 100vw; 
+            overflow-x: hidden;
+            overflow-y: auto; 
+            background-color: #87CEEB; /* Sky blue */
+            font-family: 'Comic Sans MS', 'Courier New', Courier, monospace;
+        }
+        
+        #sky { 
+            width: 100%; 
+            position: relative; /* Height will be set dynamically via JS */
+        }
+
+        /* =========================================
+           2. Cloud Physics Wrapper (Handles positioning and interaction)
+           ========================================= */
+        .cloud {
+            position: absolute;
+            cursor: pointer;
+            color: #333;
+            transform: translate(-50%, -50%); 
+            transition: width 0.4s, height 0.4s;
+            user-select: none;
+            z-index: 10;
+        }
+
+        /* =========================================
+           3. Cloud Visual Background Layer (Handles shape & pencil stroke)
+           ========================================= */
+        .cloud-bg {
+            position: absolute;
+            top: 0; left: 0; 
+            width: 100%; height: 100%;
+            background: rgb(255, 255, 255);
+            border-radius: 50px;
+            z-index: -1; 
+            transition: border-radius 0.4s;
+
+            /* CSS Magic: Creates a perfect solid stroke using drop-shadows */
+            filter: 
+                drop-shadow(2px 0px 0px #333) 
+                drop-shadow(-2px 0px 0px #333) 
+                drop-shadow(0px 2px 0px #333) 
+                drop-shadow(0px -2px 0px #333);
+        }
+
+        /* Pseudo-elements to create the bumpy cloud arcs */
+        .cloud-bg::before, .cloud-bg::after {
+            content: '';
+            position: absolute;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+
+        /* Variations for different cloud shapes */
+        .cloud-bg.shape-1::before { width: 45%; height: 90%; top: -35%; left: 15%; }
+        .cloud-bg.shape-1::after { width: 55%; height: 100%; top: -45%; right: 15%; }
+
+        .cloud-bg.shape-2::before { width: 50%; height: 80%; top: -25%; left: 10%; }
+        .cloud-bg.shape-2::after { width: 40%; height: 70%; top: -30%; right: 20%; }
+
+        .cloud-bg.shape-3::before { width: 65%; height: 120%; top: -60%; left: 20%; }
+        .cloud-bg.shape-3::after { width: 35%; height: 70%; top: -20%; right: 5%; }
+
+        /* Hover effect: Adds an offset hard shadow for a hand-drawn 3D feel */
+        .cloud:hover .cloud-bg { 
+            filter: 
+                drop-shadow(3px 0px 0px #111) 
+                drop-shadow(-3px 0px 0px #111) 
+                drop-shadow(0px 3px 0px #111) 
+                drop-shadow(0px -3px 0px #111)
+                drop-shadow(6px 6px 0px rgba(0,0,0,0.15)); 
+        }
+
+        /* =========================================
+           4. Cloud Content Layer (Strict text boundary protection)
+           ========================================= */
+        .cloud-content {
+            position: absolute;
+            top: 0; left: 0; 
+            width: 100%; height: 100%;
+            display: flex; flex-direction: column; 
+            justify-content: center; align-items: center;
+            box-sizing: border-box;
+            padding: 10px 20px; /* Safe padding */
+            overflow: hidden; /* Prevent text overflow */
+            z-index: 2;
+        }
+
+        .topic-title { 
+            font-weight: bold; 
+            margin-bottom: 5px; 
+            color: #1976d2; 
+            text-align: center; 
+            
+            /* Break long words to prevent them from breaking the container layout */
+            word-wrap: break-word;
+            word-break: break-all;
+            max-width: 100%;
+            line-height: 1.2;
+            
+            /* Truncate text after 3 lines with an ellipsis (...) */
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .news-list { 
+            display: none; /* Hidden by default */
+            list-style: none; 
+            padding: 0; margin: 15px 0 0 0; 
+            width: 100%; 
+        }
+        
+        .news-item { margin-bottom: 12px; font-size: 14px; border-bottom: 1px dashed #ccc; padding-bottom: 8px; }
+        .news-item a { color: #555; text-decoration: none; display: block; transition: color 0.2s;}
+        .news-item a:hover { color: #111; text-decoration: underline; }
+
+        /* =========================================
+           5. Cloud Expanded State (When clicked)
+           ========================================= */
+        .cloud.expanded {
+            width: 320px !important; 
+            height: 400px !important; /* Fixed height for the expanded panel */
+            z-index: 1000; cursor: default;
+        }
+
+        .cloud.expanded .cloud-bg { border-radius: 15px; }
+        .cloud.expanded .cloud-bg::before, .cloud.expanded .cloud-bg::after { opacity: 0; pointer-events: none; }
+
+        .cloud.expanded .cloud-content {
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scrolling for long lists */
+        }
+
+        .cloud.expanded .topic-title { 
+            font-size: 20px !important; /* Uniform font size upon expansion */
+            text-align: left; 
+            -webkit-line-clamp: unset; /* Show full text, remove line clamp */
+            line-clamp: unset; /* Standard property for compatibility */
+            display: block;
+        }
+        
+        .cloud.expanded .news-list { display: block; }
+
+        /* =========================================
+           6. Animations & Moomin Easter Egg
+           ========================================= */
+        .floating { animation: float 4s ease-in-out infinite; }
+        @keyframes float { 
+            0%, 100% { transform: translate(-50%, -50%) translateY(0); } 
+            50% { transform: translate(-50%, -50%) translateY(-12px); } 
+        }
+
+        .moomin-footer {
+            position: absolute;
+            bottom: 0px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px; 
+            z-index: 5; /* Keep it below the clouds */
+            pointer-events: none; /* Ensure it doesn't block interactions */
+            opacity: 0.9;
+        }
+        @keyframes breathe {
+            0% { transform: translateX(-50%) scale(1); }
+            100% { transform: translateX(-50%) scale(1.03); }
+        }
+    </style>
+</head>
+<body>
+
+<div id="sky">
+    <img src="assets/Moomin.png" class="moomin-footer" alt="Moomin">
+</div>
+
+<script>
+    // Calculate the cloud radius dynamically based on the number of articles
+    function getRadius(d) {
+        const count = d.count || (d.articles ? d.articles.length : 0) || 5;
+        // Base radius is 90 to ensure even the smallest cloud has enough room for text
+        const r = 90 + count * 4; 
+        // Set minimum and maximum limits
+        return isNaN(r) ? 100 : Math.min(r, 160); 
+    }
+
+    const width = window.innerWidth;
+    const sky = d3.select("#sky");
+
+    d3.json("../data/topic_modeling_data.json").then(data => {
+        
+        if (!data || data.length === 0) {
+            sky.html("<h2 style='text-align:center; padding-top:20%; color: white; font-family: sans-serif;'>Data is empty, please check your JSON file!</h2>");
+            return;
+        }
+
+        // Calculate dynamic total height of the scrollable area
+        const totalHeight = Math.max(window.innerHeight, data.length * 120);
+        sky.style("height", totalHeight + "px");
+
+        // Initialize node positions
+        const nodes = data.map((d, i) => ({
+            ...d,
+            x: width / 2 + (Math.random() - 0.5) * (width * 0.8), // Scatter widely across the X-axis
+            y: (i / data.length) * (totalHeight - 300) + 100, // Distribute evenly along the Y-axis
+            radius: getRadius(d),
+            shapeClass: "shape-" + (Math.floor(Math.random() * 3) + 1)
+        }));
+
+        // Configure D3 Force Simulation
+        const simulation = d3.forceSimulation(nodes)
+            .force("charge", d3.forceManyBody().strength(60)) // Repel each other to prevent overlapping
+            .force("x", d3.forceX(width / 2).strength(0.01)) // Very weak gravity towards the center X
+            .force("y", d3.forceY(d => d.y).strength(0.1)) // Keep them on their respective Y-axis "floors"
+            .force("collide", d3.forceCollide().radius(d => d.radius + 20).iterations(3))
+            .alphaDecay(0.02)
+            .velocityDecay(0.4);
+
+        // --- DOM Construction ---
+
+        // 1. Create the physical wrapper (.cloud)
+        const clouds = sky.selectAll(".cloud")
+            .data(nodes).enter()
+            .append("div")
+            .attr("class", "cloud floating")
+            .style("width", d => d.radius * 1.6 + "px") 
+            .style("height", d => d.radius * 0.9 + "px");
+
+        // 2. Append the background layer with stroke filters (.cloud-bg)
+        clouds.append("div").attr("class", d => `cloud-bg ${d.shapeClass}`);
+
+        // 3. Append the safe content layer (.cloud-content)
+        const content = clouds.append("div").attr("class", "cloud-content");
+
+        // Add topic title and scale font size based on cloud radius
+        content.append("div")
+            .attr("class", "topic-title")
+            .style("font-size", d => {
+                const scale = d.radius / 80; 
+                return Math.max(12, Math.min(13 * scale, 17)) + "px"; // Clamp font size
+            })
+            .text(d => d.topic);
+
+        // Add the news list
+        const lists = content.append("ul").attr("class", "news-list");
+
+        lists.selectAll("li")
+            .data(d => d.articles).enter()
+            .append("li").attr("class", "news-item")
+            .append("a").attr("href", d => d.url).attr("target", "_blank").text(d => d.headline);
+
+        // Update positions on every tick of the physics engine
+        simulation.on("tick", () => {
+            clouds
+                .style("left", d => {
+                    const paddingX = d.radius;
+                    d.x = Math.max(paddingX, Math.min(width - paddingX, d.x)); // Keep within screen bounds
+                    return `${d.x}px`;
+                })
+                .style("top", d => {
+                    const paddingY = d.radius;
+                    // Keep clouds above the bottom 250px to protect the Moomin image
+                    d.y = Math.max(paddingY, Math.min(totalHeight - paddingY - 250, d.y));
+                    return `${d.y}px`;
+                });
+        });
+
+        // --- Interaction Logic ---
+
+        // Cloud click event: Expand the clicked cloud and close others
+        clouds.on("click", function(event, d) {
+            event.stopPropagation();
+            if (event.target.tagName === "A") return; // Don't trigger if a link was clicked
+            
+            const node = d3.select(this);
+            const isExp = node.classed("expanded");
+
+            if (!isExp) {
+                // Close all currently expanded clouds
+                sky.selectAll(".cloud.expanded").each(function(n) {
+                    d3.select(this).classed("expanded", false).classed("floating", true);
+                    n.fx = null; n.fy = null;
+                });
+
+                // Expand the clicked one and fix its position
+                node.classed("expanded", true).classed("floating", false);
+                d.fx = d.x; d.fy = d.y; 
+                simulation.force("collide").radius(n => n === d ? 220 : n.radius + 20); // Push other clouds away
+            } else {
+                // Collapse if already expanded
+                node.classed("expanded", false).classed("floating", true);
+                d.fx = null; d.fy = null; 
+                simulation.force("collide").radius(n => n.radius + 20); // Restore normal collision radius
+            }
+            
+            simulation.alpha(0.8).restart(); // Wake up the physics engine
+        });
+
+        // Sky click event: Close all expanded clouds when clicking the background
+        sky.on("click", function() {
+            const expandedClouds = sky.selectAll(".cloud.expanded");
+            if (!expandedClouds.empty()) {
+                expandedClouds.each(function(d) {
+                    d3.select(this).classed("expanded", false).classed("floating", true);
+                    d.fx = null; d.fy = null;
+                });
+                simulation.force("collide").radius(n => n.radius + 20);
+                simulation.alpha(0.8).restart();
+            }
+        });
+
+        // Handle window resizing
+        window.addEventListener('resize', () => {
+            simulation.force("x", d3.forceX(window.innerWidth / 2).strength(0.01));
+            simulation.alpha(0.3).restart();
+        });
+
+    }).catch(error => {
+        console.error("Failed to load JSON:", error);
+        // Error handling for CORS or file not found issues
+        sky.html(`<div style="color:#d32f2f; padding:20px; font-weight:bold; text-align:center; background:white; margin:50px auto; width:50%; border-radius:10px; font-family: sans-serif;">
+            ⚠️ Failed to load data!<br><br>
+            Please ensure you are accessing this page via a local web server (e.g., VS Code Live Server or python -m http.server), not directly via the file system.
+        </div>`);
+    });
+
+</script>
+</body>
+</html>
