@@ -26,13 +26,31 @@ def print_progress_bar(iteration, total, prefix='', suffix='', length=30, fill='
     if iteration == total: 
         print()
 
+def get_english_categories(headers):
+    print("Step 1: Discovering English News Categories...")
+    base_news_url = "https://yle.fi/news"
+    try:
+        res = requests.get(base_news_url, headers=headers, timeout=15)
+        soup = BeautifulSoup(res.content, 'html.parser')
+        links = soup.select('a[href*="/t/"][href$="/en"]')
+        categories = []
+        seen_urls = set()
+        for link in links:
+            name = link.get_text().strip()
+            href = link['href']
+            full_url = href if href.startswith("http") else f"https://yle.fi{href}"
+            if full_url not in seen_urls and name:
+                categories.append((name, full_url))
+                seen_urls.add(full_url)
+        return categories
+    except Exception as e:
+        print(f"Error: {e}")
+        return []
+
 def scrape_yle_news():
-    sections = [
-        ("Business", "https://yle.fi/t/18-220402/en"), 
-        ("Culture",  "https://yle.fi/t/18-208149/en")
-    ]
-    
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+    sections = get_english_categories(headers)
+    print(sections)
     all_news_data = []
     
     #print("\n--- STARTING SCRAPER ---")
@@ -50,8 +68,8 @@ def scrape_yle_news():
             titles = soup.find_all('h3')
             total_articles = len(titles)
             
-            #print(f"Found {total_articles} articles. Extracting...")
-            #print_progress_bar(0, total_articles, prefix='Progress:', suffix='Complete', length=40)
+            print(f"Found {total_articles} articles. Extracting...")
+            print_progress_bar(0, total_articles, prefix='Progress:', suffix='Complete', length=40)
 
             for i, t in enumerate(titles):
                 try:
