@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 import nltk
 import ollama
 
-# --- 1. Environment Preparation (SSL & NLTK) ---
+# Environment Preparation (SSL & NLTK)
 try:
     _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
@@ -24,23 +24,46 @@ except LookupError:
 from nltk.corpus import stopwords
 
 def get_satirical_title_from_llama(topic_id, keywords, sample_docs):
-    """Use Llama3 to generate a satirical title based on topic keywords and sample documents."""
+    """
+    This function crafts a prompt for Llama3 to generate a witty, satirical title for a given topic cluster.
+    """
+    # System Prompt
     system_prompt = (
-        "You are a witty and playful editor for a 'Humorous News Dictionary'. "
-        "Give this news topic a SHORT, CLEVER, and LIGHTHEARTED title (max 5 words). "
-        "Make it a gentle, funny observation. "
-        "ONLY output the title. No quotes."
+        "You are the witty author of a modern Satirical News Dictionary. "
+        "Your task is to read the provided news snippets and create a dictionary entry. "
+        "Step 1: Extract the core entity, concept, or subject from the news (1 to 3 words max). "
+        "Step 2: Write a witty, slightly cynical, but insightful definition for it, based STRICTLY on the events described in these specific news snippets. "
+        
+        "CRITICAL FORMATTING RULES: "
+        "1. Output EXACTLY in this format: [Your Word]: [Your Definition]. "
+        "2. DO NOT output the literal words 'Term:', 'Word:', or 'Definition:'. "
+        "3. Example 1 - Boeing: A company that occasionally forgets how to defy gravity. "
+        "4. Example 2 - Food Inflation: A convenient excuse for eating more cheese and eggs. "
+        "5. Do not include quotes, markdown formatting, or any conversational filler. ONLY output the final string."
     )
-    user_prompt = f"Keywords: {', '.join(keywords)}\n\nNews Examples:\n" + "\n".join([f"- {d[:150]}" for d in sample_docs])
     
+    context_text = "\n".join([f"- {doc[:200]}..." for doc in sample_docs])
+    user_prompt = (
+        f"Cluster Keywords: {', '.join(keywords)}\n\n"
+        f"News Snippets (Context):\n{context_text}\n\n"
+        "Now, generate the dictionary entry."
+    )
+
     try:
+        import ollama
         response = ollama.chat(model='llama3', messages=[
             {'role': 'system', 'content': system_prompt},
-            {'role': 'user', 'content': user_prompt},
+            {'role': 'user', 'content': user_prompt}
         ])
-        return response['message']['content'].strip().strip('"').strip("'")
-    except:
-        return f"Absurd Topic {topic_id}"
+        
+
+        result = response['message']['content'].strip(' "\'\n')
+        return result
+        
+    except Exception as e:
+        print(f"LLM Error for topic {topic_id}: {e}")
+        return f"Topic {topic_id}: A cluster too complex to define."
+
 
 def run_clustering_pipeline():
     # --- 2. data ---
