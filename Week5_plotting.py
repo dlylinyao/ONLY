@@ -111,7 +111,7 @@ def run_clustering_pipeline():
             topic_mapping[t_id] = get_satirical_title_from_llama(t_id, keywords, samples)
             print(f"   Topic {t_id} -> {topic_mapping[t_id]}")
 
-    print("[INFO] Formatting for Sky UI...")
+    print("[INFO] Formatting for UI...")
     
     results = pd.DataFrame({
         "topic_id": topics,

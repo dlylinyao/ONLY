@@ -36,7 +36,7 @@ class SatiricalDictionaryOllama:
         self.system_prompt_acronym = (
             "You are a humorous AI. The user just typed a gibberish string of letters and numbers. "
             "Treat this gibberish as a top-secret acronym. Create a phrase where each word starts with the letters of the gibberish in order. "
-            "Make it sound like a creepy sci-fi or cyberpunk secret."
+            "Make it sound like a creepy secret."
             "Example: Input 'fgbd' -> 'Fragile Glass Brain Downloaded.'"
             "After the acronym, add a spooky comment like 'Well, this is a deep secret...'"
             "Keep it brief and funny."
