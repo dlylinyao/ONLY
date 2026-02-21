@@ -16,8 +16,8 @@ Before running this application, ensure your system has the following installed:
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/your-username/Building-NLP-APP-2026.git](https://github.com/your-username/Building-NLP-APP-2026.git)
-cd Building-NLP-APP-2026
+git clone [https://github.com/dlylinyao/ONLY.git](https://github.com/dlylinyao/ONLY.git)
+cd ONLY
 ```
 
 **2. Install Python Dependencies:**
@@ -38,23 +38,32 @@ To start the app, run the main Flask script:
 python only_app.py
 ```
 
-## ⚠️ Important: The "Cold Start"
-When you run the app for the first time on a new day, it will perform a self-check and execute the full data pipeline. This process will take several minutes. Please be patient while the app completes:
-1. Scraping today's articles from Yle News.
-2. Running sentiment analysis to filter out negative news.
-3. Embedding and clustering articles (BERTopic + UMAP).
-4. Calling Llama 3 to generate satirical topic titles.
-5. Building the Boolean, TF-IDF, and Semantic search indexes.
+## 🎉 Server is Live!
+When you run the app, it will perform a self-check. If it is the first run of the day, it will scrape Yle News, analyze sentiment, and build the search indexes. This "Cold Start" process will take several minutes.
 
-Once you see `All search engines are ready.` in your terminal, the server is live!
+You will know the setup is complete and the server is live when your terminal looks like this:
+
+```text
+[INIT] All search engines are ready.
+[*] Initializing RAG Large Language Model (Ollama)...
+ * Serving Flask app 'only_app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on [http://127.0.0.1:5000](http://127.0.0.1:5000)
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+```
+Next Step: Open your web browser and navigate to the local host address provided by Flask:
+👉 http://127.0.0.1:5000
 
 ## 🎮 How to Use
-1. Open the Web UI: Navigate to http://127.0.0.1:5000 in your web browser.
-2. Explore the Sky: Click on the floating blobs to expand them. Read the satirical topic definitions and click links to read the full Yle articles.
-3. Redefine the News: * Type a term into the central search bar (e.g., "Taxation", "Trains").
+1. Explore the Sky: Click on the floating blobs to expand them. Read the  topic definitions and click links to read the full Yle articles.
+2. Redefine the News: * Type a term into the central search bar (e.g., "Taxation", "Trains").
    -Select your preferred search mode (TF-IDF, Boolean, Semantic).
    -Click REDEFINE.
-4. Enjoy: Read the witty, AI-generated satirical definition of your term based on current Finnish news context, followed by the actual source articles.
+3. Enjoy: Read the witty, AI-generated satirical definition of your term based on current Finnish news context, followed by the actual source articles.
+
 
 
 
