@@ -1,0 +1,622 @@
+[
+  {
+    "topic": "Anzola: A euphemism for Venezuela's porous border, where 80-year-olds can live undetected for decades and hapless adventurers can attempt to illegally cross with impunity.",
+    "articles": [
+      {
+        "headline": "Migri partially suspends review of Iranian asylum applications",
+        "url": "https://yle.fi/a/74-20208536"
+      },
+      {
+        "headline": "Drunk Swedish man steals courier's car, tries to drive across Finnish-Russian border",
+        "url": "https://yle.fi/a/74-20210310"
+      },
+      {
+        "headline": "Four detained on Russian border amid suspicions of human trafficking",
+        "url": "https://yle.fi/a/74-20207984"
+      },
+      {
+        "headline": "Police find elderly man living in Helsinki basement under inhumane conditions",
+        "url": "https://yle.fi/a/74-20206116"
+      },
+      {
+        "headline": "Helsinki police shelve investigation into woman's fatal balcony fall",
+        "url": "https://yle.fi/a/74-20205915"
+      },
+      {
+        "headline": "Migri deportation order quashes Venezuelan couple's dream of safe life in Finland",
+        "url": "https://yle.fi/a/74-20209150"
+      }
+    ],
+    "count": 6
+  },
+  {
+    "topic": "Citizenship: A vague concept young Finns can't seem to grasp, unless it's about getting free stuff from the government.",
+    "articles": [
+      {
+        "headline": "\"We wonder if we're welcome here\" — Immigrant groups express uncertainty and anxiety over Finland's citizenship test",
+        "url": "https://yle.fi/a/74-20211291"
+      },
+      {
+        "headline": "The stark choice immigrants face in Finland: collecting the dole or applying for citizenship",
+        "url": "https://yle.fi/a/74-20211259"
+      },
+      {
+        "headline": "Thursday's papers: The youth of today, Finland of the future, and driving with care",
+        "url": "https://yle.fi/a/74-20209803"
+      },
+      {
+        "headline": "Tuesday's papers: Finland's melancholic class, healthcare time bomb, and a cancelled snowstorm",
+        "url": "https://yle.fi/a/74-20209287"
+      },
+      {
+        "headline": "Finland's 'Granny of the Year' moved from the US for love in 1965, and stayed — \"I decided not to give up\"",
+        "url": "https://yle.fi/a/74-20210415"
+      },
+      {
+        "headline": "\"As a society, we can do better\" — Study finds people in Finland feel increasingly lonely",
+        "url": "https://yle.fi/a/74-20209846"
+      },
+      {
+        "headline": "\"Finnish is my native language, yet people still speak to me in English\" – How international adoptees feel marginalised in Finland",
+        "url": "https://yle.fi/a/74-20210321"
+      },
+      {
+        "headline": "Bullying of LGBTQ+ youth in Finnish schools has increased, says rights group",
+        "url": "https://yle.fi/a/74-20207765"
+      },
+      {
+        "headline": "Monday's papers: Helsinki life hacks, the dangers of salt, and some love for Lahti",
+        "url": "https://yle.fi/a/74-20207751"
+      },
+      {
+        "headline": "Working for the common good and learning to learn — Finland's vision for the schools of 2045",
+        "url": "https://yle.fi/a/74-20209671"
+      },
+      {
+        "headline": "Language teachers worried about focus on English",
+        "url": "https://yle.fi/a/74-20209123"
+      },
+      {
+        "headline": "Finland's paramedics increasingly face violent attacks by patients",
+        "url": "https://yle.fi/a/74-20208046"
+      },
+      {
+        "headline": "Assault reports in Finland reach record high in 2025",
+        "url": "https://yle.fi/a/74-20207446"
+      },
+      {
+        "headline": "Thai media: 11-year-old Finnish girl held captive, tortured",
+        "url": "https://yle.fi/a/74-20206086"
+      },
+      {
+        "headline": "Finnish education minister looking into extent of girls being sent abroad to undergo FGM",
+        "url": "https://yle.fi/a/74-20206790"
+      },
+      {
+        "headline": "Children's Ombudsman says East African disciplinary institutes are no secret",
+        "url": "https://yle.fi/a/74-20206984"
+      },
+      {
+        "headline": "Helsinki sends personal message to Pamela Anderson via €100k marketing campaign",
+        "url": "https://yle.fi/a/74-20206021"
+      },
+      {
+        "headline": "Worried about the climate? Concrete action can help, study suggests",
+        "url": "https://yle.fi/a/74-20207248"
+      },
+      {
+        "headline": "One third of young people think it's too easy to get a driving licence in Finland, poll finds",
+        "url": "https://yle.fi/a/74-20209565"
+      }
+    ],
+    "count": 19
+  },
+  {
+    "topic": "Finland's Golden Years: The period when you've finally mastered the art of pretending to be active and youthful despite being a mere shell of your former self, all while secretly counting down the days until the state's tax-deductible retirement package kicks in.",
+    "articles": [
+      {
+        "headline": "HS: Orpo says government is not preparing to abolish inheritance, gift tax",
+        "url": "https://yle.fi/a/74-20211460"
+      },
+      {
+        "headline": "Government grants €1m in aid to struggling news agency STT",
+        "url": "https://yle.fi/a/74-20211277"
+      },
+      {
+        "headline": "Finnish MPs reject citizens' initiative to legalise cannabis",
+        "url": "https://yle.fi/a/74-20211094"
+      },
+      {
+        "headline": "Monday's papers: Pensions blow, losing investments, and winter wonder",
+        "url": "https://yle.fi/a/74-20210481"
+      },
+      {
+        "headline": "Finland moves to tighten Kela's home care allowance for newcomers",
+        "url": "https://yle.fi/a/74-20210817"
+      },
+      {
+        "headline": "People are retiring later in Finland – and the change has been faster than expected",
+        "url": "https://yle.fi/a/74-20210157"
+      },
+      {
+        "headline": "Finnwatch calls out private healthcare firms' tax planning",
+        "url": "https://yle.fi/a/74-20209129"
+      },
+      {
+        "headline": "Centre Party calls for restoration of home maintenance tax credit",
+        "url": "https://yle.fi/a/74-20208997"
+      },
+      {
+        "headline": "More people in Finland aim to delay retirement",
+        "url": "https://yle.fi/a/74-20208044"
+      },
+      {
+        "headline": "Finland tightens access to basic social assistance",
+        "url": "https://yle.fi/a/74-20207685"
+      },
+      {
+        "headline": "Kela turns down one in four basic assistance claims",
+        "url": "https://yle.fi/a/74-20207576"
+      },
+      {
+        "headline": "Wednesday's papers: Early retirement, freezing wind, and no such thing as a free inbox",
+        "url": "https://yle.fi/a/74-20206871"
+      },
+      {
+        "headline": "Finland celebrates friendship and community on 14 February",
+        "url": "https://yle.fi/a/74-20210318"
+      },
+      {
+        "headline": "Students mark 'Vanhat Day' in style",
+        "url": "https://yle.fi/a/74-20208766"
+      },
+      {
+        "headline": "Finland's high school seniors celebrate 'penkkarit'",
+        "url": "https://yle.fi/a/74-20208582"
+      },
+      {
+        "headline": "Government looks at whether scratchcards can be gifted again",
+        "url": "https://yle.fi/a/74-20206449"
+      },
+      {
+        "headline": "Protestors call on politicians to overhaul Finland's healthcare funding model",
+        "url": "https://yle.fi/a/74-20209383"
+      }
+    ],
+    "count": 17
+  },
+  {
+    "topic": "Finlands: A nation where tourists flock to escape fiscal realities, only to find themselves staring into the abyss of budgetary woes.",
+    "articles": [
+      {
+        "headline": "Finland's job vacancies down by half since 2022",
+        "url": "https://yle.fi/a/74-20211450"
+      },
+      {
+        "headline": "Friday's papers: Pulling the 'debt brake', star restaurateur slams delivery  commissions, and slick roads this weekend",
+        "url": "https://yle.fi/a/74-20211432"
+      },
+      {
+        "headline": "Telia to shed 168 jobs in Finland as restructuring takes effect",
+        "url": "https://yle.fi/a/74-20211353"
+      },
+      {
+        "headline": "Unions: Planned integration cuts would also threaten hundreds of teaching jobs",
+        "url": "https://yle.fi/a/74-20211235"
+      },
+      {
+        "headline": "Thursday's papers: Finland's homeless numbers grow, flu season 'rages', and it's going to get colder",
+        "url": "https://yle.fi/a/74-20207110"
+      },
+      {
+        "headline": "Finland sees more foreign visitors, overnight stays reach new high",
+        "url": "https://yle.fi/a/74-20210808"
+      },
+      {
+        "headline": "Finland's employee numbers have declined for 2.5 years, business index finds",
+        "url": "https://yle.fi/a/74-20210553"
+      },
+      {
+        "headline": "Finnish government invests €65m in state firm's rare earth elements project",
+        "url": "https://yle.fi/a/74-20210142"
+      },
+      {
+        "headline": "Posti posts improved profits, but lower turnover in Q4",
+        "url": "https://yle.fi/a/74-20210102"
+      },
+      {
+        "headline": "Grocery giant S Group reports higher profits despite consumer caution",
+        "url": "https://yle.fi/a/74-20209896"
+      },
+      {
+        "headline": "Wolt finally hires couriers as employees – with exceptional terms",
+        "url": "https://yle.fi/a/74-20209883"
+      },
+      {
+        "headline": "Finnair reports best final quarter ever",
+        "url": "https://yle.fi/a/74-20209721"
+      },
+      {
+        "headline": "Uber Eats coming to Finland this year, Financial Times reports",
+        "url": "https://yle.fi/a/74-20210427"
+      },
+      {
+        "headline": "Finland opens Europe's first lithium mine",
+        "url": "https://yle.fi/a/74-20209826"
+      },
+      {
+        "headline": "Valmet Automotive gears up to build electric buses in Finland",
+        "url": "https://yle.fi/a/74-20209458"
+      },
+      {
+        "headline": "Flight delays, cancellations top Finns' list of complaints to European Consumer Centre",
+        "url": "https://yle.fi/a/74-20209352"
+      },
+      {
+        "headline": "Posti announces 121 redundancies following restructuring talks",
+        "url": "https://yle.fi/a/74-20208365"
+      },
+      {
+        "headline": "AI-generated bearded 'boomer' in summer job ad raises eyebrows, criticism",
+        "url": "https://yle.fi/a/74-20207179"
+      },
+      {
+        "headline": "Nokia, Nordea report declining profits in fourth quarter",
+        "url": "https://yle.fi/a/74-20207124"
+      },
+      {
+        "headline": "\"Only immigrants do this job\" — people paying to be Wolt couriers",
+        "url": "https://yle.fi/a/74-20206726"
+      },
+      {
+        "headline": "Finland's exports grow by 3% in 2025",
+        "url": "https://yle.fi/a/74-20208530"
+      },
+      {
+        "headline": "Finnish MEPs blame Russia for unemployment crisis, look to EU for aid",
+        "url": "https://yle.fi/a/74-20207654"
+      },
+      {
+        "headline": "Finland suffers EU's worst unemployment for second month in a row",
+        "url": "https://yle.fi/a/74-20207464"
+      },
+      {
+        "headline": "Tuesday's papers: 15 minutes to the airport, shadow tankers, and more cuts",
+        "url": "https://yle.fi/a/74-20206612"
+      },
+      {
+        "headline": "Finland's Evangelical Lutheran Church sees membership boost",
+        "url": "https://yle.fi/a/74-20208601"
+      },
+      {
+        "headline": "Turku café bakes world's biggest Runeberg pastry",
+        "url": "https://yle.fi/a/74-20208551"
+      },
+      {
+        "headline": "Turku overtakes Tampere as Finland's fastest-growing city",
+        "url": "https://yle.fi/a/74-20207991"
+      },
+      {
+        "headline": "Finland's unemployment rose again in December, edging closer to 11%",
+        "url": "https://yle.fi/a/74-20206753"
+      },
+      {
+        "headline": "Consumer confidence down again in January",
+        "url": "https://yle.fi/a/74-20206669"
+      },
+      {
+        "headline": "Finland announces €20m education support project for Ukraine",
+        "url": "https://yle.fi/a/74-20208291"
+      },
+      {
+        "headline": "Finland commits €3m to UN women's initiative in Ukraine",
+        "url": "https://yle.fi/a/74-20208978"
+      },
+      {
+        "headline": "Immigration to Finland dropped sharply last year",
+        "url": "https://yle.fi/a/74-20207399"
+      },
+      {
+        "headline": "Finns cool on defence tax",
+        "url": "https://yle.fi/a/74-20206934"
+      },
+      {
+        "headline": "Finnish tourism to US fell by 25% last year",
+        "url": "https://yle.fi/a/74-20207214"
+      },
+      {
+        "headline": "More than €4 billion needed for road and rail repairs, says Finland's infrastructure agency",
+        "url": "https://yle.fi/a/74-20209161"
+      },
+      {
+        "headline": "Wednesday's papers: Security-minded Finns, Everyone's Rights confusion, and it's not just the weather that's cold",
+        "url": "https://yle.fi/a/74-20208221"
+      }
+    ],
+    "count": 36
+  },
+  {
+    "topic": "Greenland: A strategically located island that's only interesting when foreign dignitaries visit, but otherwise a frozen wasteland of diplomatic significance.",
+    "articles": [
+      {
+        "headline": "CNN: Trump expects Finnish representative at 'Peace Board' meeting",
+        "url": "https://yle.fi/a/74-20211207"
+      },
+      {
+        "headline": "Estonia: Nato would strike 'deep inside Russia' if Putin hits Baltics",
+        "url": "https://yle.fi/a/74-20211059"
+      },
+      {
+        "headline": "Rovaniemi chosen as site for Nato's Forward Land Forces HQ",
+        "url": "https://yle.fi/a/74-20210621"
+      },
+      {
+        "headline": "Helsinki Shipyard signs icebreaker deal with US Coast Guard",
+        "url": "https://yle.fi/a/74-20209835"
+      },
+      {
+        "headline": "Finland doesn't like Article 5 talk regarding Ukraine, Politico says",
+        "url": "https://yle.fi/a/74-20208496"
+      },
+      {
+        "headline": "Valtonen plays down strains in US–Finnish relations: \"Let's not get a divorce\"",
+        "url": "https://yle.fi/a/74-20208031"
+      },
+      {
+        "headline": "PM: Joining Nato was \"the only right choice\"",
+        "url": "https://yle.fi/a/74-20207597"
+      },
+      {
+        "headline": "Finland welcomes Marco Rubio's comments on transatlantic unity",
+        "url": "https://yle.fi/a/74-20210324"
+      },
+      {
+        "headline": "USU: Finns losing confidence in Nato security guarantees",
+        "url": "https://yle.fi/a/74-20210302"
+      },
+      {
+        "headline": "Yle sources: Finnish liaison officers end mission in Greenland",
+        "url": "https://yle.fi/a/74-20206091"
+      },
+      {
+        "headline": "Orpo: Greenland clash left a mark on EU-US relations",
+        "url": "https://yle.fi/a/74-20206032"
+      },
+      {
+        "headline": "Friday's papers: Stubb predicts three Greenland outcomes, government wants AI healthcare help, and how long should you wear underwear?",
+        "url": "https://yle.fi/a/74-20206004"
+      }
+    ],
+    "count": 12
+  },
+  {
+    "topic": "Orpo: The Finnish leader's specialty is navigating his country's trade deficit with China, which seems to be growing as rapidly as the piles of cheap mail-order items filling up Finnish households.",
+    "articles": [
+      {
+        "headline": "Finland aims to double trade with India, PM Orpo says",
+        "url": "https://yle.fi/a/74-20211020"
+      },
+      {
+        "headline": "Finland and China sign commercial cooperation deal",
+        "url": "https://yle.fi/a/74-20207178"
+      },
+      {
+        "headline": "Orpo meets Xi in cordial talks, sidesteps contentious issues",
+        "url": "https://yle.fi/a/74-20206666"
+      },
+      {
+        "headline": "Monday's papers: Finnish pork for China, costs force business closure, and the rise of the self-scanning shopper",
+        "url": "https://yle.fi/a/74-20206377"
+      },
+      {
+        "headline": "Stubb and Orpo debate Europe's uncertain future at high-profile summits",
+        "url": "https://yle.fi/a/74-20209586"
+      },
+      {
+        "headline": "Finnish PM: Xi can help bring peace to Ukraine",
+        "url": "https://yle.fi/a/74-20206755"
+      },
+      {
+        "headline": "Finnish PM aims to drum up business in China",
+        "url": "https://yle.fi/a/74-20206317"
+      }
+    ],
+    "count": 7
+  },
+  {
+    "topic": "Plastic Prices: The art of charging Finns more for their food after they've already paid a premium to own a Asko fridge that's probably still not eco-friendly enough.",
+    "articles": [
+      {
+        "headline": "\"What is enough?\" — Rising food prices loom as Finland moves to curb supermarket private labels",
+        "url": "https://yle.fi/a/74-20210535"
+      },
+      {
+        "headline": "APN Podcast: Who pays at the checkout?",
+        "url": "https://yle.fi/a/74-20210203"
+      },
+      {
+        "headline": "Tuesday's papers: The cost of convenience, unvisited America, and fossil fans",
+        "url": "https://yle.fi/a/74-20210696"
+      },
+      {
+        "headline": "Librarian finds €2,000 in returned book",
+        "url": "https://yle.fi/a/74-20210594"
+      },
+      {
+        "headline": "Foodora is leaving Finland",
+        "url": "https://yle.fi/a/74-20210163"
+      },
+      {
+        "headline": "What to do if you bought a sofa from Asko or Sotka before bankruptcy filing",
+        "url": "https://yle.fi/a/74-20209419"
+      },
+      {
+        "headline": "Electric shock risk prompts Ikea to recall some Nymåne lamps",
+        "url": "https://yle.fi/a/74-20209329"
+      },
+      {
+        "headline": "Finnish retailers raise price of plastic bags to discourage use",
+        "url": "https://yle.fi/a/74-20209212"
+      },
+      {
+        "headline": "Finland's inflation rate growth slows significantly in January",
+        "url": "https://yle.fi/a/74-20208223"
+      },
+      {
+        "headline": "Friday's papers: Rental investor regret, famous furniture chain at risk, and otter havoc in Hanko",
+        "url": "https://yle.fi/a/74-20207355"
+      },
+      {
+        "headline": "Nordea services resume after \"unexpected technical fault\"",
+        "url": "https://yle.fi/a/74-20206319"
+      }
+    ],
+    "count": 11
+  },
+  {
+    "topic": "Rydman: A politician who is only remembered when someone more senior resigns or gets fired.",
+    "articles": [
+      {
+        "headline": "Finns Party's Wille Rydman appointed social affairs and health minister",
+        "url": "https://yle.fi/a/74-20211511"
+      },
+      {
+        "headline": "Thursday's papers: Finns Party minister switch, gender-free dressing room plans, and electricity prices spike again",
+        "url": "https://yle.fi/a/74-20211189"
+      },
+      {
+        "headline": "Finland's ski jumping coach sent home from Winter Olympics following \"drunkenness scandal\"",
+        "url": "https://yle.fi/a/74-20209935"
+      },
+      {
+        "headline": "Health minister Juuso suddenly resigns",
+        "url": "https://yle.fi/a/74-20209987"
+      },
+      {
+        "headline": "Ex-minister Hanna Kosonen will not seek re-election",
+        "url": "https://yle.fi/a/74-20208019"
+      },
+      {
+        "headline": "Finns Party MP faces expulsion from party",
+        "url": "https://yle.fi/a/74-20208335"
+      },
+      {
+        "headline": "Finnish MPs return from winter break as SDP re-elects parliamentary whip",
+        "url": "https://yle.fi/a/74-20208017"
+      },
+      {
+        "headline": "MP Saara-Sofia Sirén leaving parliament to lead pension advocacy group",
+        "url": "https://yle.fi/a/74-20206067"
+      }
+    ],
+    "count": 8
+  },
+  {
+    "topic": "Social Umk: Young people's preferred method for gradually losing their minds while simultaneously documenting their decline on multiple platforms.",
+    "articles": [
+      {
+        "headline": "APN Survey: Tell us what you think",
+        "url": "https://yle.fi/a/74-20209097"
+      },
+      {
+        "headline": "Finland looks to end \"uncontrolled human experiment\" with Australia-style ban on social media",
+        "url": "https://yle.fi/a/74-20207494"
+      },
+      {
+        "headline": "APN Podcast: To ban or not to ban — Finland's social media conundrum",
+        "url": "https://yle.fi/a/74-20207418"
+      },
+      {
+        "headline": "Should Finland ban social media for kids? Tell us what you think",
+        "url": "https://yle.fi/a/74-20206619"
+      },
+      {
+        "headline": "Medicines watchdog warns of deadly social media pill challenges",
+        "url": "https://yle.fi/a/74-20208900"
+      },
+      {
+        "headline": "Young people follow daily news more actively than before, survey finds",
+        "url": "https://yle.fi/a/74-20207798"
+      },
+      {
+        "headline": "Most young Finns think smartphones are harmful to their wellbeing",
+        "url": "https://yle.fi/a/74-20206936"
+      },
+      {
+        "headline": "Yle's Moomin reading marathon attracts over 1.7 million viewers",
+        "url": "https://yle.fi/a/74-20207860"
+      },
+      {
+        "headline": "The Hosts of UMK 2026 are Sami Sykkö, Jorma Uotinen, and Jasmin Beloued",
+        "url": "https://yle.fi/a/74-20208608"
+      },
+      {
+        "headline": "Over 4 million tune into Finnish radio every week, survey finds",
+        "url": "https://yle.fi/a/74-20209891"
+      }
+    ],
+    "count": 10
+  },
+  {
+    "topic": "Wintertide: A mystical phenomenon where Finland's national income is mysteriously vaporized by sub-zero temperatures, leaving only a faint chill in its wake.",
+    "articles": [
+      {
+        "headline": "Hazardous driving throughout Finland during busy travel weekend",
+        "url": "https://yle.fi/a/74-20211598"
+      },
+      {
+        "headline": "Finns pick Kuusamo landscape photo as most beautiful stamp of 2025",
+        "url": "https://yle.fi/a/74-20211505"
+      },
+      {
+        "headline": "Finland wins dramatic Olympic ice hockey QF with overtime winner",
+        "url": "https://yle.fi/a/74-20211186"
+      },
+      {
+        "headline": "Wednesday's papers: Finland's ordinary PM for extraordinary times, signs of economic recovery, and a sporting reality check",
+        "url": "https://yle.fi/a/74-20209537"
+      },
+      {
+        "headline": "Finland set for cold and crisp conditions as skiing holiday starts",
+        "url": "https://yle.fi/a/74-20210352"
+      },
+      {
+        "headline": "Friday's papers: Finnish money 'going up in smoke', an expecting minister, and widespread cold warnings",
+        "url": "https://yle.fi/a/74-20210072"
+      },
+      {
+        "headline": "Cold but dry weather ahead for the weekend",
+        "url": "https://yle.fi/a/74-20208757"
+      },
+      {
+        "headline": "Tuesday's papers: Finland's deep freeze, Russian rhetoric, and Tampere's men-only club",
+        "url": "https://yle.fi/a/74-20207975"
+      },
+      {
+        "headline": "Finnish Lapland sees coldest January in nearly 40 years",
+        "url": "https://yle.fi/a/74-20207815"
+      },
+      {
+        "headline": "In pictures: Life in ice-cold Finland",
+        "url": "https://yle.fi/a/74-20207611"
+      },
+      {
+        "headline": "Southern Finland's record-breaking cold to continue",
+        "url": "https://yle.fi/a/74-20207405"
+      },
+      {
+        "headline": "Flu season in 8th week — with no end in sight",
+        "url": "https://yle.fi/a/74-20210977"
+      },
+      {
+        "headline": "Monday's papers: Cold snap chills spot prices, quenching AI's thirst, and selfish Europeans",
+        "url": "https://yle.fi/a/74-20209068"
+      },
+      {
+        "headline": "Finland to introduce 'green wave' automated system for emergency vehicles",
+        "url": "https://yle.fi/a/74-20207808"
+      }
+    ],
+    "count": 14
+  }
+]
