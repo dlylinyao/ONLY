@@ -1,3 +1,4 @@
+from difflib import context_diff
 import os
 import re
 import string
@@ -16,16 +17,16 @@ class SatiricalDictionaryOllama:
             "Style Guidelines:\n"
             "1. Cynical and Dark.\n"
             "2. Highlight the absurdity of the specific situation described in the text.\n"
-            "3. Keep it under 50 words."
+            "3. ATTENTION: Keep it under 50 words." \
+            "Only output the definition, No explanations or commentary.No explanations or commentary."
         )
 
         self.system_prompt_hallucinate = (
             "You are a highly imaginative, slightly paranoid conspiracy theorist. "
             "The user will give you a common word. You must invent a wildly detailed, absurd, "
-            "or conspiratorial story explaining what this word REALLY is. "
+            "or imaginative story explaining what this word REALLY is. "
             "CRITICAL RULE: At the very end of your response, you MUST suddenly drop the act "
-            "and explicitly admit you made it all up (e.g., '...What? you don't believe me? Okayyy, I made it up!')."
-            "keep it under 100 words."
+            "keep it under 50 words."
         )
 
         self.system_prompt_pet = (
@@ -40,7 +41,7 @@ class SatiricalDictionaryOllama:
             "Make it sound like a creepy secret."
             "Example: Input 'fgbd' -> 'Fragile Glass Brain Downloaded.'"
             "After the acronym, add a spooky comment like 'Well, this is a deep secret...'"
-            "Keep it brief and funny."
+            "Keep it under 50 words and funny."
         )
 
     def ingest_context_list(self, context_list):

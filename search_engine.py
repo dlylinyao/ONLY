@@ -10,24 +10,18 @@ from nltk.stem import SnowballStemmer
 stemmer = SnowballStemmer("english")
 original_vocabulary = set()
 
-# 1. Global Variables
-
 documents = []
 
-# Boolean Search Variables
 cv = None
 sparse_td_matrix = None
 t2i = {}
 
-# TF-IDF Search Variables
 tfidf_vectorizer = None
 tfidf_matrix = None
 
-# Semantic Search Variables
 bert_model = None
 bert_embeddings = None
 
-# Boolean Operators Map
 d = {
     "and": "&",
     "AND": "&",
@@ -40,11 +34,7 @@ d = {
 }
 
 
-# 2. Helper Functions
-
-
 def stemmed_tokenizer(text):
-
     tokens = re.findall(r"(?u)\b\w+\b", text.lower())
     if tokens:
         original_vocabulary.update(tokens)
@@ -53,8 +43,6 @@ def stemmed_tokenizer(text):
 
 
 def get_news_data():
-
-    # folder_path = "data"
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     folder_path = os.path.join(BASE_DIR, "data")
 
@@ -63,12 +51,10 @@ def get_news_data():
     files = glob.glob(search_path)
 
     if not files:
-        print(f"[ERROR] No files matching '{file_pattern}' found in '{folder_path}'.")
         return []
 
     latest_file = max(files, key=os.path.getctime)
     try:
-        print(f"[DATA] Loading data from {latest_file}...")
         df = pd.read_csv(latest_file)
 
         for col in ["Time", "Category", "Headline", "Full_Text"]:
@@ -77,23 +63,20 @@ def get_news_data():
             df[col] = df[col].fillna("")
 
         df["content"] = (
-            "["
-            + df["Time"]
-            + "] "
+            df["Time"]
+            + " | "
             + df["Category"]
-            + ": "
+            + " | "
             + df["Headline"]
             + "\n\n"
             + df["Full_Text"]
         )
         return df["content"].tolist()
-    except Exception as e:
-        print(f"[ERROR] An unexpected error occurred loading data: {e}")
+    except Exception:
         return []
 
 
 def enable_wildcards(term, vocabulary):
-
     pattern = re.escape(term)
     pattern = pattern.replace(r"\*", r"\w*")
     matches = [v for v in vocabulary if re.fullmatch(pattern, v)]
@@ -101,11 +84,9 @@ def enable_wildcards(term, vocabulary):
 
 
 def rewrite_token(t):
-
     if t in d:
         return d[t]
 
-    # Handle wildcards
     if "*" in t:
         raw_matches = enable_wildcards(t.lower(), original_vocabulary)
         stemmed_matches = {stemmer.stem(m) for m in raw_matches}
@@ -127,30 +108,49 @@ def rewrite_query(query):
     return " ".join(rewrite_token(t) for t in query.split())
 
 
-# 3. Initialization Logic
+def generate_snippet(text, query, window_size=80):
+    parts = text.split("\n\n", 1)
+    headline = parts[0]
+    body = parts[1] if len(parts) > 1 else text
+
+    if not query:
+        return f"[{headline}]\n\n{body[:window_size * 2]}..."
+
+    clean_query = re.sub(r'\b(AND|OR|NOT|and|or|not)\b', '', query).strip()
+    first_term = clean_query.split()[0] if clean_query else query
+    
+    match = re.search(re.escape(first_term), body, re.IGNORECASE)
+    
+    if match:
+        start_idx = match.start()
+        end_idx = match.end()
+        
+        snippet_start = max(0, start_idx - window_size)
+        snippet_end = min(len(body), end_idx + window_size)
+        
+        snippet = body[snippet_start:snippet_end]
+        original_word = body[start_idx:end_idx]
+        snippet = snippet.replace(original_word, f"<b>{original_word}</b>")
+        
+        prefix = "..." if snippet_start > 0 else ""
+        suffix = "..." if snippet_end < len(body) else ""
+        return f"[{headline}]\n\n{prefix}{snippet}{suffix}"
+    
+    return f"[{headline}]\n\n{body[:window_size * 2]}..."
 
 
 def init_all_engines():
     global documents, cv, sparse_td_matrix, t2i, tfidf_vectorizer, tfidf_matrix, bert_model, bert_embeddings
 
-    print("[INIT] Starting engine initialization...")
     documents = get_news_data()
     if not documents:
-        print("[ERROR] Initialization failed: No documents loaded.")
         return
 
-    print(f"[INIT] Loaded {len(documents)} documents.")
-
-    # 1. Initialize Boolean
-    print("[INIT] Building Boolean Index...", end=" ")
     cv = CountVectorizer(lowercase=True, binary=True, tokenizer=stemmed_tokenizer)
     sparse_matrix = cv.fit_transform(documents)
     t2i = cv.vocabulary_
     sparse_td_matrix = sparse_matrix.T.tocsr()
-    print("Done.")
 
-    # 2. Initialize TF-IDF
-    print("[INIT] Building TF-IDF Index...", end=" ")
     tfidf_vectorizer = TfidfVectorizer(
         lowercase=True,
         sublinear_tf=True,
@@ -160,21 +160,12 @@ def init_all_engines():
         ngram_range=(1, 3),
     )
     tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
-    print("Done.")
 
-    # 3. Initialize Semantic
-    print("[INIT] Loading Semantic Model (This may take a moment)...", end=" ")
     try:
         bert_model = SentenceTransformer("all-MiniLM-L6-v2")
         bert_embeddings = bert_model.encode(documents)
-        print("Done.")
-    except Exception as e:
-        print(f"\n[WARNING] Semantic model failed to load: {e}")
-
-    print("[INIT] All search engines are ready.")
-
-
-# 4. Search Functions
+    except Exception:
+        pass
 
 
 def search_boolean(query, top_k=5):
@@ -183,20 +174,19 @@ def search_boolean(query, top_k=5):
         hits_list = list(np.array(hits_matrix).flatten().nonzero()[0])
 
         results = []
-        for idx in hits_list[:top_k]:  # Limit to top_k
+        for idx in hits_list[:top_k]:
             results.append(
                 {"doc_id": int(idx), "score": 1.0, "content": documents[idx]}
             )
         return results
-    except Exception as e:
-        print(f"[ERROR] Boolean Search Error: {e}")
+    except Exception:
         return []
 
 
 def search_tfidf(query, top_k=5):
     if not query:
         return []
-    # Expansion for wildcards in TF-IDF
+        
     expanded_query_terms = []
     for word in query.split():
         if "*" in word:
@@ -229,9 +219,7 @@ def search_tfidf(query, top_k=5):
 
 def search_semantic(query, top_k=5):
     if bert_model is None:
-        return [
-            {"doc_id": -1, "score": 0, "content": "Semantic search is not available."}
-        ]
+        return []
 
     query_embedding = bert_model.encode([query])
     cosine_similarities = np.dot(query_embedding, bert_embeddings.T)[0]
@@ -239,7 +227,6 @@ def search_semantic(query, top_k=5):
 
     results = []
     for idx in ranked_indices[:top_k]:
-        # Filter low relevance
         if cosine_similarities[idx] > 0.1:
             results.append(
                 {
@@ -252,12 +239,14 @@ def search_semantic(query, top_k=5):
 
 
 def search(query, mode="tfidf", top_k=5):
-
-    print(f"[SEARCH] Query: '{query}' | Mode: '{mode}'")
     if mode == "boolean":
-        return search_boolean(query, top_k)
+        results = search_boolean(query, top_k)
     elif mode == "semantic":
-        return search_semantic(query, top_k)
+        results = search_semantic(query, top_k)
     else:
-        # default TF-IDF
-        return search_tfidf(query, top_k)
+        results = search_tfidf(query, top_k)
+        
+    for res in results:
+        res["content"] = generate_snippet(res["content"], query)
+        
+    return results
