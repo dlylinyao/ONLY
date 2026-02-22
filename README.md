@@ -93,7 +93,7 @@ We set the sentiment analysis threshold score to 1 and our scraper assigns every
 
 #### Filtering based on timestamps
 
-We want to base our app's output to most latest news, so our app filters out news that are older than a week. We use datetime and timedelta to process the timestamps of the news. To make the scraping more efficient our scraper looks at the timestamp first and processes only the articles that have a timestamp that is recent enough.
+We want to base our app's output to most latest news, so our app filters out news that are older than a month. We use datetime and timedelta to process the timestamps of the news. To make the scraping more efficient our scraper looks at the timestamp first and processes only the articles that have a timestamp that is recent enough.
 
 ### Search engine (All)
 
