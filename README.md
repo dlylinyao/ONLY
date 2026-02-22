@@ -106,19 +106,16 @@ Our RAG system is powered by a local Llama 3 (via Ollama), ensuring zero API cos
 - **Easter Eggs**: To handle bad inputs, our code (_get_gibberish_type) uses funny fallbacks - Hallucinate Mode, Acronym Mode and Pet Mode.
 
 ### Flask (Linyao)
-My primarily focused on backend integration, UI development, and finalizing the production pipeline.
+Our Flask backend acts as the brain of the application, seamlessly connecting the interactive web UI with our complex Python data pipelines and AI models. The backend is designed to handle system automation, API routing, and user experience optimizations:
 
-#### Backend & Application Integration
-Integrated the Flask backend and connected the TF-IDF search engine to the web UI. Successfully integrated the RAG model and the topic clustering (Plotting) modules into the main backend.
+#### Automated Data Pipeline:
+To ensure our users always see the latest news, the app performs a daily self-check upon startup. If today's news data is missing, Flask automatically triggers the scraper and the topic clustering scripts in the background to generate fresh content.
 
-#### Search Engine Improvements
-Improved the search engine's recall and precision by implementing stemming and multi-word phrases. Added a search mode dropdown (TF-IDF, Boolean, Semantic) and enabled 'Enter' key support to trigger searches.
+#### Full-Stack Integration:
+When a user interacts with the app, Flask acts as the traffic controller. It receives the user's search query, routes it to the search engine to find the top articles, and feeds those articles into the RAG model. It then packages the AI's definition and the search results into a JSON response, updating the UI dynamically without reloading the page.
 
-#### Data Pipeline & Automation
+#### Search & UI Optimization:
 Cleaned the initial CSV data, merged metadata with headlines, and verified boolean search compatibility. Automated the daily news scraping process upon system startup, fixed file paths, and extended the scraping timeframe to 30 days to improve clustering data.
-
-#### UI & Project Management
-Optimized the frontend UI design and page transition logic for a better user experience, while also hiding the search score display for a cleaner look. Cleaned up the repository by moving legacy code to an old_main branch to keep the main branch production-ready. Wrote the user instructions and helped prepare the final presentation.
 
 ### User Interface (Niki)
 
@@ -141,5 +138,6 @@ The app automatically scrapes the latest articles from Yle News. To keep things 
 Users can search for any word using three different search engines (Boolean, TF-IDF, or Semantic). The app then finds the best news articles and sends them to a local LLM model (Llama 3). This LLM acts like a cynical editor, writing a funny, 50-word definition based only on the real news. If you type random letters, the app will even give you a joke instead of an error!
 
 Finally, the homepage shows a cool, interactive map of today's news topics, all grouped and named by the LLM. Hope it brings you a little joy amidst the dull news!
+
 
 
