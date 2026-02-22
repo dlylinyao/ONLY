@@ -1,5 +1,5 @@
 ﻿# ONLY in Finland 
-## Satricial dictionary based on latest news
+## A satricial dictionary based on latest news
 
 ## Introduction
 
@@ -105,4 +105,5 @@ Our app has a search engine that shows the user the relevant news for any input.
 ### User Interface (Niki)
 
 ### Plot (Yuxin)
+
 
