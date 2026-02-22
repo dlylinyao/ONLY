@@ -106,6 +106,19 @@ Our RAG system is powered by a local Llama 3 (via Ollama), ensuring zero API cos
 - **Easter Eggs**: To handle bad inputs, our code (_get_gibberish_type) uses funny fallbacks - Hallucinate Mode, Acronym Mode and Pet Mode.
 
 ### Flask (Linyao)
+My primarily focused on backend integration, UI development, and finalizing the production pipeline.
+
+#### Backend & Application Integration
+Integrated the Flask backend and connected the TF-IDF search engine to the web UI. Successfully integrated the RAG model and the topic clustering (Plotting) modules into the main backend.
+
+#### Search Engine Improvements
+Improved the search engine's recall and precision by implementing stemming and multi-word phrases. Added a search mode dropdown (TF-IDF, Boolean, Semantic) and enabled 'Enter' key support to trigger searches.
+
+#### Data Pipeline & Automation
+Cleaned the initial CSV data, merged metadata with headlines, and verified boolean search compatibility. Automated the daily news scraping process upon system startup, fixed file paths, and extended the scraping timeframe to 30 days to improve clustering data.
+
+#### UI & Project Management
+Optimized the frontend UI design and page transition logic for a better user experience, while also hiding the search score display for a cleaner look. Cleaned up the repository by moving legacy code to an old_main branch to keep the main branch production-ready. Wrote the user instructions and helped prepare the final presentation.
 
 ### User Interface (Niki)
 
@@ -128,4 +141,5 @@ The app automatically scrapes the latest articles from Yle News. To keep things 
 Users can search for any word using three different search engines (Boolean, TF-IDF, or Semantic). The app then finds the best news articles and sends them to a local LLM model (Llama 3). This LLM acts like a cynical editor, writing a funny, 50-word definition based only on the real news. If you type random letters, the app will even give you a joke instead of an error!
 
 Finally, the homepage shows a cool, interactive map of today's news topics, all grouped and named by the LLM. Hope it brings you a little joy amidst the dull news!
+
 
