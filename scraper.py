@@ -188,7 +188,7 @@ def scrape_yle_news():
         os.makedirs(output_folder, exist_ok=True)
 
         current_date = datetime.now().strftime("%Y-%m-%d")
-        filename = f"yle_business_culture_{current_date}.csv"
+        filename = f"yle_all_{current_date}.csv"
         full_path = os.path.join(output_folder, filename)
 
         df.to_csv(full_path, index=False, encoding="utf-8-sig")
@@ -226,7 +226,7 @@ def scrape_yle_news():
         os.makedirs(output_folder, exist_ok=True)
 
         current_date = datetime.now().strftime("%Y-%m-%d")
-        filename = f"yle_news_{current_date}.csv"
+        filename = f"yle_news_filtered_out_{current_date}.csv"
         full_path = os.path.join(output_folder, filename)
 
         df_filtered_out.to_csv(full_path, index=False, encoding="utf-8-sig")

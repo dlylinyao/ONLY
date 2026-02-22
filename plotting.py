@@ -80,6 +80,8 @@ def run_clustering_pipeline():
     search_path = os.path.join(folder_path, file_pattern)
     files = glob.glob(search_path)
 
+    files = [f for f in files if "filtered_out" not in f]
+
     if not files:
         print(f"[ERROR] CSV not found in {folder_path}")
         return
