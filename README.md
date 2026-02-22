@@ -1,4 +1,4 @@
-﻿# ONLY in Finland – A satirical dictionary based on latest news
+﻿# ONLY in Finland – A satirical dictionary based on the latest news
 
 ## Introduction
 
