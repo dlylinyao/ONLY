@@ -79,7 +79,7 @@ Next Step: Open your web browser and navigate to the local host address provided
 
 ## Features and responsibilities
 
-### Scraping Yle html with Bautiful Soup
+### Scraping Yle html with Beautiful Soup
 
 The base of our app is the scraper that scrapes 27 categories of Yle news. The scraper logic itself was created by Niki Tai and handling the output was managed by Yuxin Su. Our app runs the scraper automatically when openened if the oldest dataset is older than 24 hours.
 
