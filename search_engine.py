@@ -50,6 +50,8 @@ def get_news_data():
     search_path = os.path.join(folder_path, file_pattern)
     files = glob.glob(search_path)
 
+    files = [f for f in files if "filtered_out" not in f]
+
     if not files:
         return []
 
