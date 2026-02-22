@@ -1,6 +1,44 @@
 [
   {
-    "topic": "Finlandia: The nation that, despite being thousands of miles away, somehow always manages to find itself at the center of American diplomatic intrigue and conspiracy theories.",
+    "topic": "Finland Cold: A country where \"winter\" is a verb, and its citizens are experts at redefining the concept of \"cold\" as \"refreshing\".",
+    "articles": [
+      {
+        "headline": "Finland set for cold and crisp conditions as skiing holiday starts",
+        "url": "https://yle.fi/a/74-20210352"
+      },
+      {
+        "headline": "Friday's papers: Finnish money 'going up in smoke', an expecting minister, and widespread cold warnings",
+        "url": "https://yle.fi/a/74-20210072"
+      },
+      {
+        "headline": "Cold but dry weather ahead for the weekend",
+        "url": "https://yle.fi/a/74-20208757"
+      },
+      {
+        "headline": "Tuesday's papers: Finland's deep freeze, Russian rhetoric, and Tampere's men-only club",
+        "url": "https://yle.fi/a/74-20207975"
+      },
+      {
+        "headline": "Finnish Lapland sees coldest January in nearly 40 years",
+        "url": "https://yle.fi/a/74-20207815"
+      },
+      {
+        "headline": "In pictures: Life in ice-cold Finland",
+        "url": "https://yle.fi/a/74-20207611"
+      },
+      {
+        "headline": "Southern Finland's record-breaking cold to continue",
+        "url": "https://yle.fi/a/74-20207405"
+      },
+      {
+        "headline": "Flu season in 8th week — with no end in sight",
+        "url": "https://yle.fi/a/74-20210977"
+      }
+    ],
+    "count": 8
+  },
+  {
+    "topic": "Finland: A nation occasionally remembered by American diplomats as a crucial bridge between their own interests and those of Greenland, but only when it suits them.",
     "articles": [
       {
         "headline": "Finnish foreign minister on Trump's second term: \"We’ve learned not to be shocked by minor things\"",
@@ -58,7 +96,233 @@
     "count": 13
   },
   {
-    "topic": "Finlandification: A phenomenon where a country's population is forced to confront its economic reality by facing a daunting financial target, often accompanied by a parallel increase in adoption of environmentally friendly habits.",
+    "topic": "Orpo: A Finnish leader tasked with navigating the treacherous waters of Sino-Finnish trade, where Finland's exports are dwarfed by a tidal wave of cheap imports from China, forcing Prime Minister Petteri Orpo to rely on his best diplomatic anchors to keep the relationship afloat.",
+    "articles": [
+      {
+        "headline": "Finland aims to double trade with India, PM Orpo says",
+        "url": "https://yle.fi/a/74-20211020"
+      },
+      {
+        "headline": "Finland and China sign commercial cooperation deal",
+        "url": "https://yle.fi/a/74-20207178"
+      },
+      {
+        "headline": "Orpo meets Xi in cordial talks, sidesteps contentious issues",
+        "url": "https://yle.fi/a/74-20206666"
+      },
+      {
+        "headline": "Monday's papers: Finnish pork for China, costs force business closure, and the rise of the self-scanning shopper",
+        "url": "https://yle.fi/a/74-20206377"
+      },
+      {
+        "headline": "Finnish PM: Xi can help bring peace to Ukraine",
+        "url": "https://yle.fi/a/74-20206755"
+      },
+      {
+        "headline": "Finnish PM aims to drum up business in China",
+        "url": "https://yle.fi/a/74-20206317"
+      }
+    ],
+    "count": 6
+  },
+  {
+    "topic": "Rainbow Youth: Those who are more likely to be bullied because adults are still trying to figure out how to make everyone's colors fit together seamlessly.",
+    "articles": [
+      {
+        "headline": "Finnish police use new law to launch first probes into suspected FGM cases, paper says",
+        "url": "https://yle.fi/a/74-20211474"
+      },
+      {
+        "headline": "Finnish women travelling to Sweden to treat birthing injuries",
+        "url": "https://yle.fi/a/74-20209171"
+      },
+      {
+        "headline": "Bullying of LGBTQ+ youth in Finnish schools has increased, says rights group",
+        "url": "https://yle.fi/a/74-20207765"
+      },
+      {
+        "headline": "Finnish education minister looking into extent of girls being sent abroad to undergo FGM",
+        "url": "https://yle.fi/a/74-20206790"
+      },
+      {
+        "headline": "Wednesday's papers: Security-minded Finns, Everyone's Rights confusion, and it's not just the weather that's cold",
+        "url": "https://yle.fi/a/74-20208221"
+      }
+    ],
+    "count": 5
+  },
+  {
+    "topic": "Retirement Age: The point at which you'll finally have enough wrinkles to justify taking it easy, but only if you're willing to forgo your social assistance and live off the meager pension fund that's been neglected since the 90s.",
+    "articles": [
+      {
+        "headline": "HS: Orpo says government is not preparing to abolish inheritance, gift tax",
+        "url": "https://yle.fi/a/74-20211460"
+      },
+      {
+        "headline": "Government grants €1m in aid to struggling news agency STT",
+        "url": "https://yle.fi/a/74-20211277"
+      },
+      {
+        "headline": "Monday's papers: Pensions blow, losing investments, and winter wonder",
+        "url": "https://yle.fi/a/74-20210481"
+      },
+      {
+        "headline": "Finnish MPs reject citizens' initiative to legalise cannabis",
+        "url": "https://yle.fi/a/74-20211094"
+      },
+      {
+        "headline": "Finland moves to tighten Kela's home care allowance for newcomers",
+        "url": "https://yle.fi/a/74-20210817"
+      },
+      {
+        "headline": "People are retiring later in Finland – and the change has been faster than expected",
+        "url": "https://yle.fi/a/74-20210157"
+      },
+      {
+        "headline": "Finnwatch calls out private healthcare firms' tax planning",
+        "url": "https://yle.fi/a/74-20209129"
+      },
+      {
+        "headline": "Centre Party calls for restoration of home maintenance tax credit",
+        "url": "https://yle.fi/a/74-20208997"
+      },
+      {
+        "headline": "More people in Finland aim to delay retirement",
+        "url": "https://yle.fi/a/74-20208044"
+      },
+      {
+        "headline": "Finland tightens access to basic social assistance",
+        "url": "https://yle.fi/a/74-20207685"
+      },
+      {
+        "headline": "Kela turns down one in four basic assistance claims",
+        "url": "https://yle.fi/a/74-20207576"
+      },
+      {
+        "headline": "Wednesday's papers: Early retirement, freezing wind, and no such thing as a free inbox",
+        "url": "https://yle.fi/a/74-20206871"
+      },
+      {
+        "headline": "Donor-conceived adults in Finland gain access to their origins",
+        "url": "https://yle.fi/a/74-20208912"
+      },
+      {
+        "headline": "Government looks at whether scratchcards can be gifted again",
+        "url": "https://yle.fi/a/74-20206449"
+      },
+      {
+        "headline": "Protestors call on politicians to overhaul Finland's healthcare funding model",
+        "url": "https://yle.fi/a/74-20209383"
+      }
+    ],
+    "count": 15
+  },
+  {
+    "topic": "Rydman: A Finns Party loyalist with a knack for appearing out of nowhere to collect scraps from the ministry buffet.",
+    "articles": [
+      {
+        "headline": "Finns Party's Wille Rydman appointed social affairs and health minister",
+        "url": "https://yle.fi/a/74-20211511"
+      },
+      {
+        "headline": "Finland's ski jumping coach sent home from Winter Olympics following \"drunkenness scandal\"",
+        "url": "https://yle.fi/a/74-20209935"
+      },
+      {
+        "headline": "Thursday's papers: Finns Party minister switch, gender-free dressing room plans, and electricity prices spike again",
+        "url": "https://yle.fi/a/74-20211189"
+      },
+      {
+        "headline": "Health minister Juuso suddenly resigns",
+        "url": "https://yle.fi/a/74-20209987"
+      },
+      {
+        "headline": "Russian neo-Nazi mercenary appeals Ukraine war crimes convictions in Finland",
+        "url": "https://yle.fi/a/74-20209080"
+      },
+      {
+        "headline": "Ex-minister Hanna Kosonen will not seek re-election",
+        "url": "https://yle.fi/a/74-20208019"
+      },
+      {
+        "headline": "Finns Party MP faces expulsion from party",
+        "url": "https://yle.fi/a/74-20208335"
+      },
+      {
+        "headline": "Finnish MP Päivi Räsänen to testify before US Congress about European censorship laws",
+        "url": "https://yle.fi/a/74-20208243"
+      },
+      {
+        "headline": "Finnish MPs return from winter break as SDP re-elects parliamentary whip",
+        "url": "https://yle.fi/a/74-20208017"
+      }
+    ],
+    "count": 9
+  },
+  {
+    "topic": "Social Media Ban: A notion that momentarily unites Finns across generations, transcending their crippling love affair with digital addiction, to fantasize about a world where children under 15 aren't constantly catfishing each other.",
+    "articles": [
+      {
+        "headline": "APN Survey: Tell us what you think",
+        "url": "https://yle.fi/a/74-20209097"
+      },
+      {
+        "headline": "Finland looks to end \"uncontrolled human experiment\" with Australia-style ban on social media",
+        "url": "https://yle.fi/a/74-20207494"
+      },
+      {
+        "headline": "APN Podcast: To ban or not to ban — Finland's social media conundrum",
+        "url": "https://yle.fi/a/74-20207418"
+      },
+      {
+        "headline": "Should Finland ban social media for kids? Tell us what you think",
+        "url": "https://yle.fi/a/74-20206619"
+      },
+      {
+        "headline": "Helsinki school finds unique solution for Ramadan-fasting students",
+        "url": "https://yle.fi/a/74-20210767"
+      },
+      {
+        "headline": "Medicines watchdog warns of deadly social media pill challenges",
+        "url": "https://yle.fi/a/74-20208900"
+      },
+      {
+        "headline": "Students mark 'Vanhat Day' in style",
+        "url": "https://yle.fi/a/74-20208766"
+      },
+      {
+        "headline": "Finland's high school seniors celebrate 'penkkarit'",
+        "url": "https://yle.fi/a/74-20208582"
+      },
+      {
+        "headline": "Young people follow daily news more actively than before, survey finds",
+        "url": "https://yle.fi/a/74-20207798"
+      },
+      {
+        "headline": "Most young Finns think smartphones are harmful to their wellbeing",
+        "url": "https://yle.fi/a/74-20206936"
+      },
+      {
+        "headline": "Survey finds more support in Finland for social media ban for under-15s",
+        "url": "https://yle.fi/a/74-20206519"
+      },
+      {
+        "headline": "Yle's Moomin reading marathon attracts over 1.7 million viewers",
+        "url": "https://yle.fi/a/74-20207860"
+      },
+      {
+        "headline": "The Hosts of UMK 2026 are Sami Sykkö, Jorma Uotinen, and Jasmin Beloued",
+        "url": "https://yle.fi/a/74-20208608"
+      },
+      {
+        "headline": "Over 4 million tune into Finnish radio every week, survey finds",
+        "url": "https://yle.fi/a/74-20209891"
+      }
+    ],
+    "count": 14
+  },
+  {
+    "topic": "Sustainability: A Finnish imperative to save approximately 8-11 billion euros by 2031, while simultaneously ensuring that a significant portion of newly acquired cars are rechargeable, thereby justifying the country's claim to be both fiscally responsible and environmentally conscious.",
     "articles": [
       {
         "headline": "\"What is enough?\" — Rising food prices loom as Finland moves to curb supermarket private labels",
@@ -382,269 +646,5 @@
       }
     ],
     "count": 80
-  },
-  {
-    "topic": "Finnish Cold: A weather phenomenon where the only thing more abundant than snowflakes are excuses to stay indoors and enjoy a warm cup of coffee.",
-    "articles": [
-      {
-        "headline": "Finland set for cold and crisp conditions as skiing holiday starts",
-        "url": "https://yle.fi/a/74-20210352"
-      },
-      {
-        "headline": "Friday's papers: Finnish money 'going up in smoke', an expecting minister, and widespread cold warnings",
-        "url": "https://yle.fi/a/74-20210072"
-      },
-      {
-        "headline": "Cold but dry weather ahead for the weekend",
-        "url": "https://yle.fi/a/74-20208757"
-      },
-      {
-        "headline": "Tuesday's papers: Finland's deep freeze, Russian rhetoric, and Tampere's men-only club",
-        "url": "https://yle.fi/a/74-20207975"
-      },
-      {
-        "headline": "Finnish Lapland sees coldest January in nearly 40 years",
-        "url": "https://yle.fi/a/74-20207815"
-      },
-      {
-        "headline": "In pictures: Life in ice-cold Finland",
-        "url": "https://yle.fi/a/74-20207611"
-      },
-      {
-        "headline": "Southern Finland's record-breaking cold to continue",
-        "url": "https://yle.fi/a/74-20207405"
-      },
-      {
-        "headline": "Flu season in 8th week — with no end in sight",
-        "url": "https://yle.fi/a/74-20210977"
-      }
-    ],
-    "count": 8
-  },
-  {
-    "topic": "Orpo: A euphemism for Finland's passive-aggressive participation in global trade, where even its prime minister doesn't mind getting swept up in a \"tsunami\" of cheap goods from China.",
-    "articles": [
-      {
-        "headline": "Finland aims to double trade with India, PM Orpo says",
-        "url": "https://yle.fi/a/74-20211020"
-      },
-      {
-        "headline": "Finland and China sign commercial cooperation deal",
-        "url": "https://yle.fi/a/74-20207178"
-      },
-      {
-        "headline": "Orpo meets Xi in cordial talks, sidesteps contentious issues",
-        "url": "https://yle.fi/a/74-20206666"
-      },
-      {
-        "headline": "Monday's papers: Finnish pork for China, costs force business closure, and the rise of the self-scanning shopper",
-        "url": "https://yle.fi/a/74-20206377"
-      },
-      {
-        "headline": "Finnish PM: Xi can help bring peace to Ukraine",
-        "url": "https://yle.fi/a/74-20206755"
-      },
-      {
-        "headline": "Finnish PM aims to drum up business in China",
-        "url": "https://yle.fi/a/74-20206317"
-      }
-    ],
-    "count": 6
-  },
-  {
-    "topic": "Rainbow Youth: The demographic most likely to be mercilessly bullied while trying to figure out who they are and why they're stuck in a perpetual cycle of adolescence, with a special emphasis on receiving unwanted attention from entitled adults. (Definition based on 14.3% increase in reported incidents between 2023-20**)",
-    "articles": [
-      {
-        "headline": "Finnish police use new law to launch first probes into suspected FGM cases, paper says",
-        "url": "https://yle.fi/a/74-20211474"
-      },
-      {
-        "headline": "Finnish women travelling to Sweden to treat birthing injuries",
-        "url": "https://yle.fi/a/74-20209171"
-      },
-      {
-        "headline": "Bullying of LGBTQ+ youth in Finnish schools has increased, says rights group",
-        "url": "https://yle.fi/a/74-20207765"
-      },
-      {
-        "headline": "Finnish education minister looking into extent of girls being sent abroad to undergo FGM",
-        "url": "https://yle.fi/a/74-20206790"
-      },
-      {
-        "headline": "Wednesday's papers: Security-minded Finns, Everyone's Rights confusion, and it's not just the weather that's cold",
-        "url": "https://yle.fi/a/74-20208221"
-      }
-    ],
-    "count": 5
-  },
-  {
-    "topic": "Retirement Age: The number of years it takes to accumulate enough experience in defying early exit strategies before finally embracing mid-life crises.",
-    "articles": [
-      {
-        "headline": "HS: Orpo says government is not preparing to abolish inheritance, gift tax",
-        "url": "https://yle.fi/a/74-20211460"
-      },
-      {
-        "headline": "Government grants €1m in aid to struggling news agency STT",
-        "url": "https://yle.fi/a/74-20211277"
-      },
-      {
-        "headline": "Monday's papers: Pensions blow, losing investments, and winter wonder",
-        "url": "https://yle.fi/a/74-20210481"
-      },
-      {
-        "headline": "Finnish MPs reject citizens' initiative to legalise cannabis",
-        "url": "https://yle.fi/a/74-20211094"
-      },
-      {
-        "headline": "Finland moves to tighten Kela's home care allowance for newcomers",
-        "url": "https://yle.fi/a/74-20210817"
-      },
-      {
-        "headline": "People are retiring later in Finland – and the change has been faster than expected",
-        "url": "https://yle.fi/a/74-20210157"
-      },
-      {
-        "headline": "Finnwatch calls out private healthcare firms' tax planning",
-        "url": "https://yle.fi/a/74-20209129"
-      },
-      {
-        "headline": "Centre Party calls for restoration of home maintenance tax credit",
-        "url": "https://yle.fi/a/74-20208997"
-      },
-      {
-        "headline": "More people in Finland aim to delay retirement",
-        "url": "https://yle.fi/a/74-20208044"
-      },
-      {
-        "headline": "Finland tightens access to basic social assistance",
-        "url": "https://yle.fi/a/74-20207685"
-      },
-      {
-        "headline": "Kela turns down one in four basic assistance claims",
-        "url": "https://yle.fi/a/74-20207576"
-      },
-      {
-        "headline": "Wednesday's papers: Early retirement, freezing wind, and no such thing as a free inbox",
-        "url": "https://yle.fi/a/74-20206871"
-      },
-      {
-        "headline": "Donor-conceived adults in Finland gain access to their origins",
-        "url": "https://yle.fi/a/74-20208912"
-      },
-      {
-        "headline": "Government looks at whether scratchcards can be gifted again",
-        "url": "https://yle.fi/a/74-20206449"
-      },
-      {
-        "headline": "Protestors call on politicians to overhaul Finland's healthcare funding model",
-        "url": "https://yle.fi/a/74-20209383"
-      }
-    ],
-    "count": 15
-  },
-  {
-    "topic": "Torden: A euphemistic term for the art of political musical chairs, where party leaders and ministers are replaced with surprising frequency, leaving a trail of bewildered Finns in their wake.",
-    "articles": [
-      {
-        "headline": "Finns Party's Wille Rydman appointed social affairs and health minister",
-        "url": "https://yle.fi/a/74-20211511"
-      },
-      {
-        "headline": "Finland's ski jumping coach sent home from Winter Olympics following \"drunkenness scandal\"",
-        "url": "https://yle.fi/a/74-20209935"
-      },
-      {
-        "headline": "Thursday's papers: Finns Party minister switch, gender-free dressing room plans, and electricity prices spike again",
-        "url": "https://yle.fi/a/74-20211189"
-      },
-      {
-        "headline": "Health minister Juuso suddenly resigns",
-        "url": "https://yle.fi/a/74-20209987"
-      },
-      {
-        "headline": "Russian neo-Nazi mercenary appeals Ukraine war crimes convictions in Finland",
-        "url": "https://yle.fi/a/74-20209080"
-      },
-      {
-        "headline": "Ex-minister Hanna Kosonen will not seek re-election",
-        "url": "https://yle.fi/a/74-20208019"
-      },
-      {
-        "headline": "Finns Party MP faces expulsion from party",
-        "url": "https://yle.fi/a/74-20208335"
-      },
-      {
-        "headline": "Finnish MP Päivi Räsänen to testify before US Congress about European censorship laws",
-        "url": "https://yle.fi/a/74-20208243"
-      },
-      {
-        "headline": "Finnish MPs return from winter break as SDP re-elects parliamentary whip",
-        "url": "https://yle.fi/a/74-20208017"
-      }
-    ],
-    "count": 9
-  },
-  {
-    "topic": "Ummediation: The art of simultaneously banning and tolerating social media use, depending on the demographic and context, while pretending to be concerned about the well-being of youth.",
-    "articles": [
-      {
-        "headline": "APN Survey: Tell us what you think",
-        "url": "https://yle.fi/a/74-20209097"
-      },
-      {
-        "headline": "Finland looks to end \"uncontrolled human experiment\" with Australia-style ban on social media",
-        "url": "https://yle.fi/a/74-20207494"
-      },
-      {
-        "headline": "APN Podcast: To ban or not to ban — Finland's social media conundrum",
-        "url": "https://yle.fi/a/74-20207418"
-      },
-      {
-        "headline": "Should Finland ban social media for kids? Tell us what you think",
-        "url": "https://yle.fi/a/74-20206619"
-      },
-      {
-        "headline": "Helsinki school finds unique solution for Ramadan-fasting students",
-        "url": "https://yle.fi/a/74-20210767"
-      },
-      {
-        "headline": "Medicines watchdog warns of deadly social media pill challenges",
-        "url": "https://yle.fi/a/74-20208900"
-      },
-      {
-        "headline": "Students mark 'Vanhat Day' in style",
-        "url": "https://yle.fi/a/74-20208766"
-      },
-      {
-        "headline": "Finland's high school seniors celebrate 'penkkarit'",
-        "url": "https://yle.fi/a/74-20208582"
-      },
-      {
-        "headline": "Young people follow daily news more actively than before, survey finds",
-        "url": "https://yle.fi/a/74-20207798"
-      },
-      {
-        "headline": "Most young Finns think smartphones are harmful to their wellbeing",
-        "url": "https://yle.fi/a/74-20206936"
-      },
-      {
-        "headline": "Survey finds more support in Finland for social media ban for under-15s",
-        "url": "https://yle.fi/a/74-20206519"
-      },
-      {
-        "headline": "Yle's Moomin reading marathon attracts over 1.7 million viewers",
-        "url": "https://yle.fi/a/74-20207860"
-      },
-      {
-        "headline": "The Hosts of UMK 2026 are Sami Sykkö, Jorma Uotinen, and Jasmin Beloued",
-        "url": "https://yle.fi/a/74-20208608"
-      },
-      {
-        "headline": "Over 4 million tune into Finnish radio every week, survey finds",
-        "url": "https://yle.fi/a/74-20209891"
-      }
-    ],
-    "count": 14
   }
 ]

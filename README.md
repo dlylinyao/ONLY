@@ -101,10 +101,31 @@ Our app has a search engine that shows the user the relevant news for any input.
 
 ### RAG (Yuxin)
 
+Our RAG system is powered by a local Llama 3 (via Ollama), ensuring zero API costs and full generation control. The code includes a basic routing logic to handle different user inputs:
+- **Normal Search**: If relevant news is found, it generates a short, 50-word dark definition based on the facts.
+- **Easter Eggs**: To handle bad inputs, our code (_get_gibberish_type) uses funny fallbacks - Hallucinate Mode, Acronym Mode and Pet Mode.
+
 ### Flask (Linyao)
 
 ### User Interface (Niki)
 
-### Plot (Yuxin)
+### Plotting (Yuxin)
 
+We built a pipeline to group similar news stories together.
+
+- **Clustering**: We turn the scraped Yle news into vectors using a MiniLM embedding model. Then, we use UMAP and BERTopic to group the articles into different topics.
+
+- **LLM Naming**: Standard topic names (like "economy") are boring. Instead, our code (get_satirical_title_from_llama) feeds the cluster data back into Llama 3 to create a funny, satirical title for each group.
+
+- **UI Output**: The grouped data is saved as a JSON file, which directly powers the interactive chart on our app's homepage.
+
+## 🎙️ Summary
+
+ONLY in Finland is a fun web app that turns Finnish news into a satirical dictionary.
+
+The app automatically scrapes the latest articles from Yle News. To keep things lighthearted, it uses an LLM model to filter out news that is too negative or old.
+
+Users can search for any word using three different search engines (Boolean, TF-IDF, or Semantic). The app then finds the best news articles and sends them to a local LLM model (Llama 3). This LLM acts like a cynical editor, writing a funny, 50-word definition based only on the real news. If you type random letters, the app will even give you a joke instead of an error!
+
+Finally, the homepage shows a cool, interactive map of today's news topics, all grouped and named by the LLM. Hope it brings you a little joy amidst the dull news!
 
