@@ -1,13 +1,14 @@
-﻿# ONLY in Finland 
-## A satricial dictionary based on latest news
+﻿# ONLY in Finland – A satirical dictionary based on latest news
 
 ## Introduction
 
-Are you living in Finland but can't quite get a grasp of what the Finns are talking about? This app is for you. ONLY in Finland is an application that creates satirical dictionary definitions for user's input based on latest news from [Yle](https://yle.fi/news). 
+Are you living in Finland but can't quite get a grasp of what the Finns are talking about? 
 
-In addition, the app searches for all of the relevant news and the user can choose from three different search engines: Boolean search, TF-IDF and semantic search. 
+This app is for you. ONLY in Finland is an application that creates satirical dictionary definitions for your input using RAG based on latest news from [Yle](https://yle.fi/news). 
 
-Our interactive plot shows the user the topics of our current news database and has direct linsk to the source articles. 
+In addition, the app searches for all of the relevant news and you can choose from three different search engines: Boolean search, TF-IDF and semantic search. 
+
+Our interactive plot shows you the topics of our current news database and has direct linsk to the source articles. 
 
 You can find the user instructions and a thorough explanation of what our app does below. 
 
