@@ -102,9 +102,23 @@ Our app has a search engine that shows the user the relevant news for any input.
 ### RAG (Yuxin)
 
 ### Flask (Linyao)
+My primarily focused on backend integration, UI development, and finalizing the production pipeline.
+
+#### Backend & Application Integration
+Integrated the Flask backend and connected the TF-IDF search engine to the web UI. Successfully integrated the RAG model and the topic clustering (Plotting) modules into the main backend.
+
+#### Search Engine Improvements
+Improved the search engine's recall and precision by implementing stemming and multi-word phrases. Added a search mode dropdown (TF-IDF, Boolean, Semantic) and enabled 'Enter' key support to trigger searches.
+
+#### Data Pipeline & Automation
+Cleaned the initial CSV data, merged metadata with headlines, and verified boolean search compatibility. Automated the daily news scraping process upon system startup, fixed file paths, and extended the scraping timeframe to 30 days to improve clustering data.
+
+#### UI & Project Management
+Optimized the frontend UI design and page transition logic for a better user experience, while also hiding the search score display for a cleaner look. Cleaned up the repository by moving legacy code to an old_main branch to keep the main branch production-ready. Wrote the user instructions and helped prepare the final presentation.
 
 ### User Interface (Niki)
 
 ### Plot (Yuxin)
+
 
 
