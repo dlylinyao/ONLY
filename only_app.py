@@ -2,12 +2,17 @@ from flask import Flask, render_template, request, jsonify, send_file
 import os
 import glob
 from datetime import datetime
+import threading
 
 # Import all our custom modules
 import scraper as scraper
 import search_engine as se
 from plotting import run_clustering_pipeline
 from RAG_trial import SatiricalDictionaryOllama
+
+#for tracking if the RAG job is running
+define_running = False
+lock = threading.Lock()
 
 app = Flask(__name__)
 
@@ -100,26 +105,42 @@ def search():
 
 @app.route("/define", methods=["POST"])
 def define():
-    """Handle RAG satirical dictionary definition requests from the frontend"""
-    data = request.get_json()
-    query = data.get("query", "")
-    mode = data.get("mode", "tfidf")
+    global define_running
 
-    # 1. Retrieve top 3 news articles as RAG Context
-    results = se.search(query, mode=mode, top_k=3)
-    context_list = [res["content"] for res in results] if results else []
+    #this is for when the user tries to search for something else when ollama is still running
+    with lock:
+        if define_running:
+            return jsonify({"definition": "ONLY is still coming up with a definition for your previous input. Please wait for it to appear here and then you can search again."})
+        define_running = True
 
-    # 2. Feed into the RAG system
-    rag_system.ingest_context_list(context_list)
-
-    # 3. Generate definition
     try:
+        """Handle RAG satirical dictionary definition requests from the frontend"""
+        data = request.get_json()
+        query = data.get("query", "")
+        mode = data.get("mode", "tfidf")
+
+        # 1. Retrieve top 3 news articles as RAG Context
+        results = se.search(query, mode=mode, top_k=3)
+        context_list = [res["content"] for res in results] if results else []
+
+        # 2. Feed into the RAG system
+        rag_system.ingest_context_list(context_list)
+
+        # 3. Generate definition
+    
         definition = rag_system.generate_definition(query)
+        return jsonify({"definition": definition})
+    
     except Exception as e:
         print(f"[ERROR] Ollama generation failed: {e}")
         definition = f"Oops! Connection failed, Llama3 is on strike. (Error: {e})"
+    
+    #this defines that the ollama is done and another search will be successful
+    finally:
+        with lock:
+            define_running = False
 
-    return jsonify({"definition": definition})
+    
 
 
 if __name__ == "__main__":
