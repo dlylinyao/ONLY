@@ -118,7 +118,7 @@ When a user interacts with the app, Flask acts as the traffic controller. It rec
 Cleaned the initial CSV data, merged metadata with headlines, and verified boolean search compatibility. Automated the daily news scraping process upon system startup, fixed file paths, and extended the scraping timeframe to 30 days to improve clustering data.
 
 ### User Interface (Niki)
-
+To disrupt the doom-scrolling habit, our UI prioritizes joy and humor through a modern Glassmorphism aesthetic. By utilizing semi-transparent backgrounds and high-quality blurs, we created a light and ethereal atmosphere. This is paired with a vibrant pastel palette and a custom JavaScript Floating Emoji System that dynamically spawns animated icons across the screen. These design choices foster a whimsical environment, showing to users that staying informed can be a lighthearted and stress-free experience.
 ### Plotting (Yuxin)
 
 We built a pipeline to group similar news stories together.
@@ -138,6 +138,7 @@ The app automatically scrapes the latest articles from Yle News. To keep things 
 Users can search for any word using three different search engines (Boolean, TF-IDF, or Semantic). The app then finds the best news articles and sends them to a local LLM model (Llama 3). This LLM acts like a cynical editor, writing a funny, 50-word definition based only on the real news. If you type random letters, the app will even give you a joke instead of an error!
 
 Finally, the homepage shows a cool, interactive map of today's news topics, all grouped and named by the LLM. Hope it brings you a little joy amidst the dull news!
+
 
 
 
