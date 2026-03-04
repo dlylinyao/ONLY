@@ -64,7 +64,8 @@ class SatiricalDictionaryOllama:
         with open(file_path, "r", encoding="utf-8") as f:
             text = f.read()
 
-        self.context_chunks = [str(text).strip() for text in context_list if text]
+        # split the file content into non‑empty stripped lines
+        self.context_chunks = [line.strip() for line in text.splitlines() if line.strip()]
         if not self.context_chunks:
             print("[INFO] No context provided. Easter egg modes enabled.")
         else:

@@ -122,6 +122,9 @@ def run_clustering_pipeline():
     topic_info = topic_model.get_topic_info()
     topic_mapping = {-1: "Miscellaneous Nonsense"}
 
+    # ADDED: Set to collect relevant seed words for evaluation
+    seed_words = set()
+
     for t_id in topic_info["Topic"]:
         if t_id != -1:
             keywords = [w for w, s in topic_model.get_topic(t_id)[:5]]
@@ -130,6 +133,11 @@ def run_clustering_pipeline():
                 t_id, keywords, samples
             )
             print(f"   Topic {t_id} -> {topic_mapping[t_id]}")
+
+            # ADDED: Extract keywords for the seed list
+            for word, score in topic_model.get_topic(t_id):
+                if len(word) > 2 and len(seed_words) < 60:
+                    seed_words.add(word)
 
     print("[INFO] Formatting for UI...")
 
@@ -155,6 +163,14 @@ def run_clustering_pipeline():
         json.dump(sky_data, f, ensure_ascii=False, indent=2)
 
     print(f"\n[SUCCESS] Topic Modeling Data JSON created at {output_json}")
+
+    # ADDED: Save the 50 relevant seed words to a CSV file
+    seed_words_list = list(seed_words)[:60]
+    if seed_words_list:
+        seed_df = pd.DataFrame({"Relevant_Words": seed_words_list})
+        seed_csv_path = os.path.join(folder_path, "relevant_seed_words.csv")
+        seed_df.to_csv(seed_csv_path, index=False, encoding="utf-8")
+        print(f"[SUCCESS] Relevant seed words saved to {seed_csv_path}")
 
 
 if __name__ == "__main__":

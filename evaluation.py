@@ -1,6 +1,6 @@
 
 import semantic_search as se
-from RAG_trial import SatiricalDictionaryOllama
+from RAG import SatiricalDictionaryOllama
 from ollama_withoutRAG import SatiricalDictionaryOllamaNoRAG
 import json
 
