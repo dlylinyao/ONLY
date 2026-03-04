@@ -76,6 +76,16 @@ Next Step: Open your web browser and navigate to the local host address provided
    -Click REDEFINE.
 3. Enjoy: Read the witty, AI-generated satirical definition of your term based on current Finnish news context, followed by the actual source articles.
 
+## Troubleshooting
+
+### Common issues and their suggested solutions:
+
+| Issue                           | Suggested solution |
+|----------------------------------|--------------------|
+| Issue with Python dependencies  | We recommend using a virtual environment based on Python version 12 or lower and installing all packages from `requirements.txt`. |
+| Issues with topic modeling or generating definitions | Make sure you have [Ollama](https://ollama.com) installed and running (see installation instructions). |
+| Definition generation is slow   | Definitions take some time when using CPU on a laptop. If you have access to a server, try using a GPU for faster generation. |
+| I don't get any search results for my input | Switch to semantic search or browse through our topic modeling on the front page for input word inspiration! |
 
 ## Features and responsibilities
 
