@@ -35,7 +35,7 @@ cd ONLY
 **2. Install Python Dependencies:**
 It is recommended to use a virtual environment.
 ```bash
-pip install flask pandas beautifulsoup4 requests transformers torch sentence-transformers umap-learn bertopic scikit-learn nltk ollama
+pip install -r requirements.txt
 ```
 **3. Set up the Local LLM:**
 Ensure Ollama is installed and running on your machine. Pull the Llama 3 model:
@@ -83,9 +83,10 @@ Next Step: Open your web browser and navigate to the local host address provided
 | Issue                           | Suggested solution |
 |----------------------------------|--------------------|
 | Issue with Python dependencies  | We recommend using a virtual environment based on Python version 12 or lower and installing all packages from `requirements.txt`. |
-| Issues with topic modeling or generating definitions | Make sure you have [Ollama](https://ollama.com) installed and running (see installation instructions). |
+| Issues with topic modeling or generating definitions | Make sure you have [Ollama](https://ollama.com) installed and running (see installation instructions).|
 | Definition generation is slow   | Definitions take some time when using CPU on a laptop. If you have access to a server, try using a GPU for faster generation. |
-| I don't get any search results for my input | Switch to semantic search or browse through our topic modeling on the front page for input word inspiration! |
+| I don't get any search results for my input | Switch to semantic search or browse through our topic modeling on the front page for input word inspiration! | 
+| None of the above, app just won't run | Make sure you have internet connection. |
 
 ## Features and responsibilities
 
