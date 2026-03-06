@@ -8,14 +8,31 @@ os.environ["HF_HUB_CACHE"] = os.environ["HF_HOME"]
 os.environ["HF_DATASETS_CACHE"] = os.path.join(os.environ["HF_HOME"], "datasets")
 
 import json
-import sys
 import argparse
+import random
+import numpy as np
 import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 ORIGINAL_FILE = "data/Definitions_Generation_Results_ID.json"
 OUTPUT_DIR = "data/judged_models"
+
+
+def set_seed(seed: int):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+    # Best-effort determinism
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
+    try:
+        torch.use_deterministic_algorithms(True, warn_only=True)
+    except Exception:
+        pass
 
 
 def safe_model_name(model_name: str) -> str:
@@ -46,6 +63,7 @@ def load_definitions_for_model(model_name: str):
     if os.path.exists(output_file):
         print(f"Resuming from existing file: {output_file}")
         return load_json(output_file), output_file
+
     print(f"Starting from original file: {ORIGINAL_FILE}")
     return load_json(ORIGINAL_FILE), output_file
 
@@ -97,8 +115,13 @@ def normalize_scores(parsed):
     return {"funny": funny, "political": political}
 
 
-def build_messages(word: str, text: str, model: str):
-    system_prompt = """You are a strict scoring function.
+def tokenizer_supports_system_role(tokenizer) -> bool:
+    template = getattr(tokenizer, "chat_template", None)
+    return template is not None and "system" in template
+
+
+def build_messages(word: str, text: str, model):
+    instruction_prompt = """You are a strict scoring function.
 
 Task:
 Score a satirical definition on two dimensions:
@@ -137,20 +160,23 @@ Output rules:
 Valid output example:
 {"funny": 3, "political": 4}
 """
+
     user_prompt = f"Word: {word}\nDefinition: {text}"
-    
+
     if "gemma" in model:
-        return = [
+        return [
             {
                 "role": "user",
-                "content": f"{system_prompt}\n\n{user_prompt}"
+                "content": f"{instruction_prompt}\n\n{user_prompt}"
             }
         ]
-    else:    
+    else:
         return [
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": instruction_prompt},
             {"role": "user", "content": user_prompt},
         ]
+
+
 
 
 def flatten_pending_samples(definitions, llm_name: str):
@@ -217,7 +243,9 @@ def generate_batch(model, tokenizer, batch_messages, max_new_tokens: int):
             attention_mask=attention_mask,
             max_new_tokens=max_new_tokens,
             do_sample=False,
+            num_beams=1,
             pad_token_id=tokenizer.eos_token_id,
+            use_cache=True,
         )
 
     results = []
@@ -234,10 +262,12 @@ def generate_batch(model, tokenizer, batch_messages, max_new_tokens: int):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("model_name", type=str, help="HF model name, e.g. Qwen/Qwen2.5-7B-Instruct")
-    parser.add_argument("--batch-size", type=int, default=8, help="Batch size for generation")
-    parser.add_argument("--max-new-tokens", type=int, default=64, help="Max new tokens to generate")
-    parser.add_argument("--save-every-batch", action="store_true", help="Save after each batch")
+    parser.add_argument("--batch-size", type=int, default=8, help="Batch size")
+    parser.add_argument("--max-new-tokens", type=int, default=20, help="Max tokens for generation")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     args = parser.parse_args()
+
+    set_seed(args.seed)
 
     model_name = args.model_name
     llm_name = model_name.split("/")[-1]
@@ -268,17 +298,18 @@ def main():
     print(f"Output file: {output_file}")
     print(f"Pending definitions for {llm_name}: {len(pending)}")
     print(f"Batch size: {args.batch_size}")
+    print(f"Seed: {args.seed}")
 
     if len(pending) == 0:
         print("Nothing to do.")
         return
 
     parse_failures = 0
-
     progress = tqdm(list(batched(pending, args.batch_size)), desc="Batches")
 
     for batch in progress:
-        batch_messages = [build_messages(item["word"], item["text"]) for item in batch]
+        batch_messages = [build_messages(item["word"], item["text"], model_name) for item in batch]
+
         raw_results = generate_batch(
             model=model,
             tokenizer=tokenizer,
@@ -296,17 +327,15 @@ def main():
                 "raw_response": raw_result,
                 "funny": normalized["funny"] if normalized else None,
                 "political": normalized["political"] if normalized else None,
+                "seed": args.seed,
             }
 
             if normalized is None:
                 parse_failures += 1
 
-        if args.save_every_batch:
-            save_json(definitions, output_file)
-
+        # Always save every batch so partial progress is not lost
+        save_json(definitions, output_file)
         progress.set_postfix(parse_failures=parse_failures)
-
-    save_json(definitions, output_file)
 
     print("Done.")
     print(f"Saved: {output_file}")
