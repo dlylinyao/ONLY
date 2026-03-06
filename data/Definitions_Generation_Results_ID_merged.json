@@ -1905,8 +1905,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: posti\nDefinition: The postal service: where dreams go to die. {\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -2945,8 +2945,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "{\"funny\": 3, \"political\": 4}\n\n\nWord: finland\nDefinition: A country where the only thing more abundant than darkness is disappointment. {\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -3905,8 +3905,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "{\"funny\": 3, \"political\": 4}\n\n\nWord: finns\nDefinition: \"A collective noun for people who can somehow survive the concept of sauna without losing their souls.\" {\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -4127,32 +4127,32 @@
         "llm_judge": {
           "aya-expanse-8b": {
             "raw_response": "Do not output anything except the JSON object\n\nValid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Sahara\nDefinition: A Finnish summer without mosquitoes.<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>{\"funny\": 4, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 4,
+            "political": 1,
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
             "raw_response": "output anything except the JSON object\n\nValid output example:\n{\"funny\": 3, \"political\": 4}\n\nuser\nWord: Sahara\nDefinition: A Finnish summer without mosquitoes.\nassistant\n{\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "output anything except the JSON object\n\nValid output example:\n{\"funny\": 3, \"political\": 4}user\n\nWord: Sahara\nDefinition: A Finnish summer without mosquitoes.assistant\n\n{\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "fences\n- Do not output anything except the JSON object\n\nValid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Sahara\nDefinition: A Finnish summer without mosquitoes. {\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
             "raw_response": "anything except the JSON object\n\nValid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Sahara\nDefinition: A Finnish summer without mosquitoes.\nassistant\n{\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           }
         }
@@ -4545,8 +4545,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "{\"funny\": 3, \"political\": 4}\n\n\nWord: Samurai\nDefinition: \"A mythical species thought to possess honor, discipline, and self-control, but actually just a marketing ploy for Japanese tourist boards.\" {\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -4625,8 +4625,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": ":\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Aztec\nDefinition: \"An ancient civilization that understood the value of human sacrifice, unlike modern Finns who sacrifice their souls to the god of monotony.\" {\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -5665,8 +5665,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "{\"funny\": 3, \"political\": 4}\n\n\nWord: UFO\nDefinition: \"A euphemism for 'a drunk Finn's imagination on a Tuesday afternoon'\" {\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -5825,8 +5825,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "Valid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: NASA\nDefinition: \"Nation's Abode for Stagnant Astronomers\" {\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -5905,8 +5905,8 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: YMCA\nDefinition: A place where Finns go to complain about the weather, simultaneously. {\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -6447,26 +6447,26 @@
         "llm_judge": {
           "aya-expanse-8b": {
             "raw_response": "example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: &&&$%^&(*)\nDefinition: Finnish concept of \"joy\" in a sauna.<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>{\"funny\": 5, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 5,
+            "political": 1,
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
             "raw_response": "{\"funny\": 3, \"political\": 4}\n\nuser\nWord: &&&$%^&(*)\nDefinition: Finnish concept of \"joy\" in a sauna.\nassistant\n{\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 3, \"political\": 4}user\n\nWord: &&&$%^&(*)\nDefinition: Finnish concept of \"joy\" in a sauna.assistant\n\n{\"funny\": 1, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 1,
+            "political": 1,
             "seed": 42
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: &&&$%^&(*)\nDefinition: Finnish concept of \"joy\" in a sauna. {\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
@@ -7087,14 +7087,14 @@
         "llm_judge": {
           "aya-expanse-8b": {
             "raw_response": "Valid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Levitate\nDefinition: To pretend to have an idea while simultaneously wondering where the snack is hidden.<|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|>{\"funny\": 4, \"political\": 2}",
-            "funny": null,
-            "political": null,
+            "funny": 4,
+            "political": 1,
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
             "raw_response": "example:\n{\"funny\": 3, \"political\": 4}\n\nuser\nWord: Levitate\nDefinition: To pretend to have an idea while simultaneously wondering where the snack is hidden.\nassistant\n{\"funny\": 4, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 4,
+            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7105,14 +7105,14 @@
           },
           "Mistral-7B-Instruct-v0.3": {
             "raw_response": "- Do not output anything except the JSON object\n\nValid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Levitate\nDefinition: To pretend to have an idea while simultaneously wondering where the snack is hidden. {\"funny\": 2, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 2,
+            "political": 1,
             "seed": 42
           },
           "EuroLLM-9B-Instruct": {
             "raw_response": "Valid output example:\n{\"funny\": 3, \"political\": 4}\n\n\nWord: Levitate\nDefinition: To pretend to have an idea while simultaneously wondering where the snack is hidden.\nassistant\n{\"funny\": 3, \"political\": 1}",
-            "funny": null,
-            "political": null,
+            "funny": 3,
+            "political": 1,
             "seed": 42
           }
         }
