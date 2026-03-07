@@ -119,7 +119,7 @@ def define():
         mode = data.get("mode", "tfidf")
 
         # 1. Retrieve top 3 news articles as RAG Context
-        results = se.search(query, mode=mode, top_k=3)
+        results = se.search(query, mode=mode, top_k=3, for_rag=True)
         context_list = [res["content"] for res in results] if results else []
 
         # 2. Feed into the RAG system

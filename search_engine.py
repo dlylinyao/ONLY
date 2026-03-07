@@ -239,8 +239,7 @@ def search_semantic(query, top_k=5):
             )
     return results
 
-
-def search(query, mode="tfidf", top_k=5):
+def search(query, mode="tfidf", top_k=5, for_rag=False):
     if mode == "boolean":
         results = search_boolean(query, top_k)
     elif mode == "semantic":
@@ -249,6 +248,7 @@ def search(query, mode="tfidf", top_k=5):
         results = search_tfidf(query, top_k)
         
     for res in results:
-        res["content"] = generate_snippet(res["content"], query)
+        if not for_rag:
+            res["content"] = generate_snippet(res["content"], query)
         
     return results
