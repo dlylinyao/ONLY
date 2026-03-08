@@ -15,7 +15,7 @@ without_rag_system = SatiricalDictionaryOllamaNoRAG(model_name="llama3")
 
 # Load CSV File
 csv_filename = "data/Definitions_Generation - Sheet1.csv"
-output_filename = "data/Definitions_Generation_Results.csv"
+output_filename = "data/Definitions_Generation_Results_V2.csv"
 
 print(f"Loading words from {csv_filename}...")
 try:
@@ -48,7 +48,8 @@ for index, row in df.iterrows():
 
     # RAG Generation
     try:
-        results = se.search(word, top_k=3)
+        for_rag=True
+        results = se.search(word, top_k=5, for_rag=True, threshold=0.15)
         context_list = [res["content"] for res in results] if results else []
         rag_system.ingest_context_list(context_list)
         rag_def = rag_system.generate_definition(word)

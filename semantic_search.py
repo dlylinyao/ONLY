@@ -91,8 +91,7 @@ def init_engine():
     except Exception:
         pass
 
-
-def search_semantic(query, top_k=5):
+def search_semantic(query, top_k=5, threshold=0.15):
     if bert_model is None:
         return []
 
@@ -100,9 +99,13 @@ def search_semantic(query, top_k=5):
     cosine_similarities = np.dot(query_embedding, bert_embeddings.T)[0]
     ranked_indices = np.argsort(cosine_similarities)[::-1]
 
+    if len(ranked_indices) > 0:
+        top_score = float(cosine_similarities[ranked_indices[0]])
+        print(f"[DEBUG] Highest similarity scorefor '{query}': {top_score:.4f}")
+
     results = []
     for idx in ranked_indices[:top_k]:
-        if cosine_similarities[idx] > 0.1:
+        if cosine_similarities[idx] > threshold:
             results.append(
                 {
                     "doc_id": int(idx),
@@ -112,10 +115,11 @@ def search_semantic(query, top_k=5):
             )
     return results
 
-
-def search(query, top_k=5):
-    results = search_semantic(query, top_k)
+def search(query, top_k=5, for_rag=False, threshold=0.15):
+    results = search_semantic(query, top_k, threshold)
+    
     for res in results:
-        res["content"] = generate_snippet(res["content"], query)
-        
+        if not for_rag:
+            res["content"] = generate_snippet(res["content"], query)
+            
     return results
