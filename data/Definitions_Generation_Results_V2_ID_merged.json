@@ -20,12 +20,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -61,12 +55,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -112,12 +100,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -153,12 +135,6 @@
             "raw_response": "{\"funny\": 2, \"political\": 4}",
             "funny": 2,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -204,12 +180,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -245,12 +215,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -296,12 +260,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -337,12 +295,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -388,12 +340,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -429,12 +375,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -480,12 +420,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -520,12 +454,6 @@
           "Qwen2.5-7B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
             "political": 1,
             "seed": 42
           },
@@ -572,12 +500,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -613,12 +535,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -664,12 +580,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 4}",
-            "funny": 2,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -705,12 +615,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -756,12 +660,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -797,12 +695,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -848,12 +740,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -889,12 +775,6 @@
             "raw_response": "{\"funny\": 2, \"political\": 3}",
             "funny": 2,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -940,12 +820,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -981,12 +855,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1032,12 +900,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -1073,12 +935,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1124,12 +980,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -1165,12 +1015,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1216,12 +1060,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 4}",
-            "funny": 2,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -1254,12 +1092,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
@@ -1308,12 +1140,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -1349,12 +1175,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1400,12 +1220,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 3}",
-            "funny": 2,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 2, \"political\": 4}",
             "funny": 2,
@@ -1441,12 +1255,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1492,12 +1300,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -1533,12 +1335,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1584,12 +1380,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -1622,12 +1412,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
@@ -1676,12 +1460,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -1717,12 +1495,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1768,12 +1540,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -1809,12 +1575,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1860,12 +1620,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
@@ -1901,12 +1655,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -1952,12 +1700,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 1, \"political\": 5}",
             "funny": 1,
@@ -1993,12 +1735,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2044,12 +1780,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2085,12 +1815,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2136,12 +1860,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2174,12 +1892,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
@@ -2228,12 +1940,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2269,12 +1975,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2320,12 +2020,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2361,12 +2055,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2412,12 +2100,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -2453,12 +2135,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2504,12 +2180,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2545,12 +2215,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2596,12 +2260,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2637,12 +2295,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2688,12 +2340,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -2729,12 +2375,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2780,12 +2420,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -2821,12 +2455,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2872,12 +2500,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -2913,12 +2535,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -2964,12 +2580,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -3005,12 +2615,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3056,12 +2660,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3097,12 +2695,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3148,12 +2740,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3189,12 +2775,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 3}",
             "funny": 3,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3240,12 +2820,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3278,12 +2852,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
@@ -3332,12 +2900,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3372,12 +2934,6 @@
           "Qwen2.5-7B-Instruct": {
             "raw_response": "{\"funny\": 2, \"political\": 1}",
             "funny": 2,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
             "political": 1,
             "seed": 42
           },
@@ -3424,12 +2980,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
@@ -3465,12 +3015,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3516,12 +3060,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3557,12 +3095,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3608,12 +3140,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -3649,12 +3175,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3700,12 +3220,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3738,12 +3252,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
@@ -3792,12 +3300,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -3833,12 +3335,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3884,12 +3380,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -3925,12 +3415,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -3976,12 +3460,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4017,12 +3495,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4068,12 +3540,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4109,12 +3575,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4160,12 +3620,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4201,12 +3655,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4252,12 +3700,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4293,12 +3735,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4344,12 +3780,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4385,12 +3815,6 @@
             "raw_response": "{\"funny\": 2, \"political\": 4}",
             "funny": 2,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4436,12 +3860,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4477,12 +3895,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4528,12 +3940,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 3}",
-            "funny": 2,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 1, \"political\": 4}",
             "funny": 1,
@@ -4569,12 +3975,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4620,12 +4020,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -4661,12 +4055,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4712,12 +4100,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 3}",
-            "funny": 2,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4750,12 +4132,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
@@ -4804,12 +4180,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -4845,12 +4215,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -4896,12 +4260,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -4934,12 +4292,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 2, \"political\": 1}",
             "funny": 2,
             "political": 1,
@@ -4988,12 +4340,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -5029,12 +4375,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -5080,12 +4420,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5120,12 +4454,6 @@
           "Qwen2.5-7B-Instruct": {
             "raw_response": "{\"funny\": 2, \"political\": 4}",
             "funny": 2,
-            "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
             "political": 4,
             "seed": 42
           },
@@ -5172,12 +4500,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5210,12 +4532,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
@@ -5264,12 +4580,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5305,12 +4615,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -5356,12 +4660,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5397,12 +4695,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -5448,12 +4740,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5486,12 +4772,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
@@ -5540,12 +4820,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
@@ -5578,12 +4852,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
@@ -5632,12 +4900,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5673,12 +4935,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -5724,12 +4980,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5764,12 +5014,6 @@
           "Qwen2.5-7B-Instruct": {
             "raw_response": "{\"funny\": 2, \"political\": 1}",
             "funny": 2,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
             "political": 1,
             "seed": 42
           },
@@ -5816,12 +5060,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5857,12 +5095,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -5908,12 +5140,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -5949,12 +5175,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6000,12 +5220,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -6041,12 +5255,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6092,12 +5300,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -6133,12 +5335,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6184,12 +5380,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -6222,12 +5412,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
@@ -6276,12 +5460,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -6317,12 +5495,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6368,12 +5540,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -6409,12 +5575,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 3}",
-            "funny": 2,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6460,12 +5620,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -6501,12 +5655,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6552,12 +5700,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -6593,12 +5735,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6644,12 +5780,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -6685,12 +5815,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6736,12 +5860,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -6774,12 +5892,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
@@ -6828,12 +5940,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -6869,12 +5975,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -6920,12 +6020,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -6961,12 +6055,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7012,12 +6100,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
@@ -7053,12 +6135,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7104,12 +6180,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -7145,12 +6215,6 @@
             "raw_response": "{\"funny\": 2, \"political\": 4}",
             "funny": 2,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 3}",
-            "funny": 2,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7196,12 +6260,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 1, \"political\": 4}",
             "funny": 1,
@@ -7237,12 +6295,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7288,12 +6340,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -7329,12 +6375,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7380,12 +6420,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -7421,12 +6455,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 2, \"political\": 1}",
-            "funny": 2,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7472,12 +6500,6 @@
             "political": 1,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -7513,12 +6535,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7564,12 +6580,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -7605,12 +6615,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7656,12 +6660,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -7697,12 +6695,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7748,12 +6740,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -7789,12 +6775,6 @@
             "raw_response": "{\"funny\": 2, \"political\": 4}",
             "funny": 2,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7840,12 +6820,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
@@ -7881,12 +6855,6 @@
             "raw_response": "{\"funny\": 2, \"political\": 3}",
             "funny": 2,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -7932,12 +6900,6 @@
             "political": 5,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
@@ -7973,12 +6935,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8024,12 +6980,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
@@ -8064,12 +7014,6 @@
           "Qwen2.5-7B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 4}",
             "funny": 4,
-            "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
             "political": 4,
             "seed": 42
           },
@@ -8116,12 +7060,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8157,12 +7095,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8208,12 +7140,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8249,12 +7175,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8300,12 +7220,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8338,12 +7252,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
@@ -8392,12 +7300,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8433,12 +7335,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8484,12 +7380,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8525,12 +7415,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8576,12 +7460,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 5, \"political\": 1}",
             "funny": 5,
@@ -8617,12 +7495,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8668,12 +7540,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 3}",
-            "funny": 4,
-            "political": 3,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8709,12 +7575,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 5}",
             "funny": 4,
             "political": 5,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 3}",
-            "funny": 3,
-            "political": 3,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8760,12 +7620,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8801,12 +7655,6 @@
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8852,12 +7700,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 2}",
             "funny": 4,
@@ -8893,12 +7735,6 @@
             "raw_response": "{\"funny\": 4, \"political\": 3}",
             "funny": 4,
             "political": 3,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
             "seed": 42
           },
           "Llama-3.1-8B-Instruct": {
@@ -8944,12 +7780,6 @@
             "political": 2,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -8982,12 +7812,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 1}",
-            "funny": 3,
-            "political": 1,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 1}",
             "funny": 3,
             "political": 1,
@@ -9036,12 +7860,6 @@
             "political": 3,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 1}",
-            "funny": 4,
-            "political": 1,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -9074,12 +7892,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 4}",
-            "funny": 3,
-            "political": 4,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 4}",
             "funny": 3,
             "political": 4,
@@ -9128,12 +7940,6 @@
             "political": 4,
             "seed": 42
           },
-          "gemma-2-9b-it": {
-            "raw_response": "{\"funny\": 4, \"political\": 2}",
-            "funny": 4,
-            "political": 2,
-            "seed": 42
-          },
           "Llama-3.1-8B-Instruct": {
             "raw_response": "{\"funny\": 4, \"political\": 1}",
             "funny": 4,
@@ -9166,12 +7972,6 @@
             "seed": 42
           },
           "Qwen2.5-7B-Instruct": {
-            "raw_response": "{\"funny\": 3, \"political\": 2}",
-            "funny": 3,
-            "political": 2,
-            "seed": 42
-          },
-          "gemma-2-9b-it": {
             "raw_response": "{\"funny\": 3, \"political\": 2}",
             "funny": 3,
             "political": 2,
