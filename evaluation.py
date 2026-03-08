@@ -34,6 +34,11 @@ if "Definition (A-Rag)" not in df.columns:
     df["Definition (A-Rag)"] = ""
 if "Definition (B-non-Rag)" not in df.columns:
     df["Definition (B-non-Rag)"] = ""
+if "Highest similarity score" not in df.columns:
+    df["Highest similarity score"] = ""
+if "Chunks Loaded" not in df.columns:
+    df["Chunks Loaded"] = ""
+
 
 print("Starting generation process...")
 
@@ -49,7 +54,17 @@ for index, row in df.iterrows():
     # RAG Generation
     try:
         for_rag=True
-        results = se.search(word, top_k=5, for_rag=True, threshold=0.15)
+        raw_results = se.search(word, top_k=5, for_rag=True, threshold=-1.0)
+        highest_score = None
+        if raw_results:
+            highest_score = max([res.get("score", res.get("similarity", 0)) for res in raw_results])
+            
+        results = [res for res in raw_results if res.get("score", res.get("similarity", 0)) > 0.25]
+        
+        df.at[index, "Highest similarity score"] = highest_score
+        df.at[index, "Chunks Loaded"] = len(results) if results else 0
+        
+
         context_list = [res["content"] for res in results] if results else []
         rag_system.ingest_context_list(context_list)
         rag_def = rag_system.generate_definition(word)
@@ -65,6 +80,24 @@ for index, row in df.iterrows():
     except Exception as e:
         print(f"Error generating non-RAG definition for {word}: {e}")
         df.at[index, "Definition (B-non-Rag)"] = f"Error: {e}"
+        
+all_columns = df.columns.tolist()
+
+
+preferred_order = [
+    "Word", 
+    "Highest similarity score", 
+    "Chunks Loaded", 
+    "Definition (A-Rag)", 
+    "Definition (B-non-Rag)"
+]
+
+
+remaining_columns = [col for col in all_columns if col not in preferred_order]
+final_columns_order = preferred_order + remaining_columns
+
+
+df = df[final_columns_order]
 
 # Save results back to CSV
 print(f"Saving results to {output_filename}...")
