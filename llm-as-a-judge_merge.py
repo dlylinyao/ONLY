@@ -4,9 +4,9 @@ import argparse
 from glob import glob
 from copy import deepcopy
 
-ORIGINAL_FILE = "data/Definitions_Generation_Results_ID.json"
-DEFAULT_INPUT_DIR = "data/judged_models"
-DEFAULT_OUTPUT_FILE = "data/Definitions_Generation_Results_ID_merged.json"
+ORIGINAL_FILE = "data/Definitions_Generation_Results_ID_V2.json"
+DEFAULT_INPUT_DIR = "data/judged_models_V2"
+DEFAULT_OUTPUT_FILE = "data/Definitions_Generation_Results_V2_ID_merged.json"
 
 
 def load_json(path: str):

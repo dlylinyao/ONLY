@@ -1,7 +1,9 @@
 import os
 
 # Set cache dirs BEFORE importing transformers/datasets
-os.environ["HF_HOME"] = "/scratch/project_465001864/degibert/hf_cache"
+#os.environ["HF_HOME"] = "/scratch/project_465001864/degibert/hf_cache"
+#os.environ["TRANSFORMERS_CACHE"] = os.environ["HF_HOME"]
+os.environ["HF_HOME"] = "/scratch/project_2017554/linyaodu_cache"
 os.environ["TRANSFORMERS_CACHE"] = os.environ["HF_HOME"]
 os.environ["HUGGINGFACE_HUB_CACHE"] = os.environ["HF_HOME"]
 os.environ["HF_HUB_CACHE"] = os.environ["HF_HOME"]
@@ -15,8 +17,8 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-ORIGINAL_FILE = "data/Definitions_Generation_Results_ID.json"
-OUTPUT_DIR = "data/judged_models"
+ORIGINAL_FILE = "data/Definitions_Generation_Results_ID_V2.json"
+OUTPUT_DIR = "data/judged_models_V2"
 
 
 def set_seed(seed: int):
@@ -249,10 +251,11 @@ def generate_batch(model, tokenizer, batch_messages, max_new_tokens: int):
         )
 
     results = []
-    input_lengths = attention_mask.sum(dim=1).tolist()
+    prompt_length = attention_mask.shape[1]
 
     for i in range(outputs.shape[0]):
-        generated_tokens = outputs[i][int(input_lengths[i]):]
+        #generated_tokens = outputs[i][int(input_lengths[i]):]
+        generated_tokens = outputs[i][prompt_length:]
         text = tokenizer.decode(generated_tokens, skip_special_tokens=True).strip()
         results.append(text)
 
