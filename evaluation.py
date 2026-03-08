@@ -54,10 +54,13 @@ for index, row in df.iterrows():
     # RAG Generation
     try:
         for_rag=True
-        results = se.search(word, top_k=5, for_rag=True, threshold=0.25)
+        raw_results = se.search(word, top_k=5, for_rag=True, threshold=-1.0)
         highest_score = None
-        if results:
-            highest_score = max([res.get("score", res.get("similarity", 0)) for res in results])
+        if raw_results:
+            highest_score = max([res.get("score", res.get("similarity", 0)) for res in raw_results])
+            
+        results = [res for res in raw_results if res.get("score", res.get("similarity", 0)) > 0.25]
+        
         df.at[index, "Highest similarity score"] = highest_score
         df.at[index, "Chunks Loaded"] = len(results) if results else 0
         
