@@ -49,7 +49,7 @@ for index, row in df.iterrows():
     # RAG Generation
     try:
         for_rag=True
-        results = se.search(word, top_k=5, for_rag=True, threshold=0.15)
+        results = se.search(word, top_k=5, for_rag=True, threshold=0.25)
         context_list = [res["content"] for res in results] if results else []
         rag_system.ingest_context_list(context_list)
         rag_def = rag_system.generate_definition(word)

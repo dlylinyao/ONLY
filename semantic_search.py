@@ -91,7 +91,7 @@ def init_engine():
     except Exception:
         pass
 
-def search_semantic(query, top_k=5, threshold=0.15):
+def search_semantic(query, top_k=5, threshold=0.25):
     if bert_model is None:
         return []
 
@@ -115,7 +115,7 @@ def search_semantic(query, top_k=5, threshold=0.15):
             )
     return results
 
-def search(query, top_k=5, for_rag=False, threshold=0.15):
+def search(query, top_k=5, for_rag=False, threshold=0.25):
     results = search_semantic(query, top_k, threshold)
     
     for res in results:
