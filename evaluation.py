@@ -35,6 +35,10 @@ if "Definition (A-Rag)" not in df.columns:
 if "Definition (B-non-Rag)" not in df.columns:
     df["Definition (B-non-Rag)"] = ""
 
+if "Highest similarity score" not in df.columns:
+    df["Highest similarity score"] = ""
+
+
 print("Starting generation process...")
 
 # Iterate through words and generate definitions (combined loop)
@@ -50,6 +54,12 @@ for index, row in df.iterrows():
     try:
         for_rag=True
         results = se.search(word, top_k=5, for_rag=True, threshold=0.25)
+        highest_score = None
+        if results:
+            highest_score = max([res.get("score", res.get("similarity", 0)) for res in results])
+        
+        df.at[index, "Highest similarity score"] = highest_score
+
         context_list = [res["content"] for res in results] if results else []
         rag_system.ingest_context_list(context_list)
         rag_def = rag_system.generate_definition(word)
