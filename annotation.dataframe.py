@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 
-master = pd.read_excel("data/Annotation_Only-3.xlsx", sheet_name="Master_Key")
+master = pd.read_excel("data/Annotation_Only_Done.xlsx", sheet_name="Master_Key")
 
 master = master.rename(columns={
     "Definition_ID": "item_id",
